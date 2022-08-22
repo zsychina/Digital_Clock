@@ -2,6 +2,7 @@ vendor_name = ModelSim
 source_file = 1, E:/FPGA/Digital_Clock/Code/TOP.v
 source_file = 1, E:/FPGA/Digital_Clock/Code/display_ctrl.v
 source_file = 1, E:/FPGA/Digital_Clock/Code/time_control.v
+source_file = 1, E:/FPGA/Digital_Clock/Waveform.vwf
 source_file = 1, E:/FPGA/Digital_Clock/db/Digital_Clock.cbx.xml
 design_name = TOP
 instance = comp, \time_control_inst|Add0~4 , time_control_inst|Add0~4, TOP, 1

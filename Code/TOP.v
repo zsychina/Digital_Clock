@@ -84,8 +84,4 @@ display_ctrl		display_ctrl_inst(
 );
 
 
-
-
-
-
 endmodule

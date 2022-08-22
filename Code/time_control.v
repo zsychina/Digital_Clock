@@ -28,7 +28,7 @@ module time_control(
 //=================时钟模块====================//
 //---------1ms延时-------//
 reg		[15:0]	cnt_1ms;	//1ms计数
-reg 	flag_1ms;			//ms进位信号
+reg 	   flag_1ms;			//ms进位信号
 always @(posedge clk or negedge rst_n) begin
 	if(!rst_n)	begin
 		cnt_1ms <= 0;
