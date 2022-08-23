@@ -15,7 +15,7 @@ module time_control(
 	input 	[3:0]	clock_min_shi,
 	input 	[3:0]	clock_hour_ge,
 	input 	[3:0]	clock_hour_shi,
-	output	reg	clock_out,
+	output	reg		clock_out,
 
 	output	[3:0]	sec_ge_r,
 	output	[3:0]	sec_shi_r,
@@ -27,18 +27,21 @@ module time_control(
 
 //=================时钟模块====================//
 //---------1ms延时-------//
+// divider
+// branch dlut22: considering the clk is 50MHz, the ms class delay should be a mod 5e3(16'd4999=16'b0001_0011_1000_0111) divider
+//
 reg		[15:0]	cnt_1ms;	//1ms计数
-reg 	   flag_1ms;			//ms进位信号
+reg 	flag_1ms;			//ms进位信号
 always @(posedge clk or negedge rst_n) begin
-	if(!rst_n)	begin
+	if(!rst_n)	begin  // rst_n=0
 		cnt_1ms <= 0;
 		flag_1ms <= 0;
 	end
-	else if(cnt_1ms == 16'd4)	begin
+	else if(cnt_1ms == 16'd4)	begin  // cnt_1ms = 0000 0000 0000 0100 = 16'd4, **change here if necessary**
 		cnt_1ms <= 0;
 		flag_1ms <= 1;
 	end
-	else	begin
+	else	begin  
 		cnt_1ms <= cnt_1ms + 1;
 		flag_1ms <= 0;
 	end
@@ -52,7 +55,7 @@ always @(posedge clk or negedge rst_n) begin
 		flag_1s <= 0;
 	end
 	else if(flag_1ms)	begin
-		if(cnt_1s == 12'd4)	begin
+		if(cnt_1s == 12'd4)	begin  // cnt_1s = 0000 0000 0100, why not 12'd999, shouldn't it a mod1000 divdier?
 			cnt_1s <= 0;
 			flag_1s <= 1;
 		end
@@ -84,8 +87,8 @@ always @(posedge clk or negedge rst_n) begin
 		sec_ge <= set_sec_ge;
 		flag_sec_ge <= 0;
 	end
-	else if(flag_1ms)	begin
-		if(sec_ge == 4'd9)	begin
+	else if(flag_1ms)	begin // should use flag_1s
+		if(sec_ge == 4'd9)	begin //
 			sec_ge <= 0;
 			flag_sec_ge <= 1;
 		end

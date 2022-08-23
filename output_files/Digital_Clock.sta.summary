@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -1.649
-TNS   : -56.168
+Slack : -2.537
+TNS   : -78.402
 
 Type  : Slow 1200mV 85C Model Setup 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : -0.561
-TNS   : -3.334
+Slack : -1.171
+TNS   : -6.886
 
 Type  : Slow 1200mV 85C Model Hold 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : -0.950
-TNS   : -6.122
+Slack : -0.744
+TNS   : -4.099
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.356
+Slack : 0.438
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -64.000
+TNS   : -93.707
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : 0.412
+Slack : 0.327
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.353
-TNS   : -43.634
+Slack : -2.290
+TNS   : -67.432
 
 Type  : Slow 1200mV 0C Model Setup 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : -0.487
-TNS   : -2.763
+Slack : -1.094
+TNS   : -6.613
 
 Type  : Slow 1200mV 0C Model Hold 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : -0.773
-TNS   : -5.001
+Slack : -0.461
+TNS   : -2.158
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.310
+Slack : 0.371
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -64.000
+TNS   : -93.707
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : 0.441
+Slack : 0.183
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.493
-TNS   : -7.926
+Slack : -0.459
+TNS   : -4.770
 
 Type  : Fast 1200mV 0C Model Setup 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : 0.135
+Slack : 0.075
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : -0.596
-TNS   : -3.857
+Slack : -0.530
+TNS   : -3.330
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.186
+Slack : 0.049
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -67.902
+TNS   : -67.748
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'display_ctrl:display_ctrl_inst|display_data[1]'
-Slack : 0.427
+Slack : 0.386
 TNS   : 0.000
 
 ------------------------------------------------------------

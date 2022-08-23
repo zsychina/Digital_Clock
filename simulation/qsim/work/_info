@@ -4,23 +4,23 @@ K3
 cModel Technology
 Z0 dE:\FPGA\Digital_Clock\simulation\qsim
 vTOP
-Z1 !s100 cZH;DVE;<`;1257P_:=DG0
-Z2 IcNh9jMEZTLZDY`D^meAg60
-Z3 VUDQz>E^IR28jgUd5?7A[R2
-Z4 dE:\FPGA\Digital_Clock\simulation\qsim
-Z5 w1661188249
-Z6 8Digital_Clock.vo
-Z7 FDigital_Clock.vo
+Z1 I8:]2:XBE9MPc^QG@jaN6i3
+Z2 VUDQz>E^IR28jgUd5?7A[R2
+Z3 dE:\FPGA\Digital_Clock\simulation\qsim
+Z4 w1661233170
+Z5 8Digital_Clock.vo
+Z6 FDigital_Clock.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|Digital_Clock.vo|
-Z10 o-work work -O0
-Z11 n@t@o@p
+Z8 !s90 -work|work|Digital_Clock.vo|
+Z9 o-work work -O0
+Z10 n@t@o@p
 !i10b 1
+Z11 !s100 b6XdaA]7HK:C5hXTW]0gb1
 !s85 0
-Z12 !s108 1661188250.454000
+Z12 !s108 1661233172.654000
 Z13 !s107 Digital_Clock.vo|
 !s101 -O0
 vTOP_vlg_check_tst
@@ -28,58 +28,58 @@ vTOP_vlg_check_tst
 Z14 !s100 mZ]T8eV4XQ=ORHhE;^5Ro3
 Z15 I9H8J7ao?:nV3@A6ZFAaB20
 Z16 VfomA2_7AomFULP5<XV`UL2
-R4
-R5
-Z17 8Digital_Clock.vt
-Z18 FDigital_Clock.vt
+R3
+Z17 w1661233169
+Z18 8Digital_Clock.vt
+Z19 FDigital_Clock.vt
 L0 83
-R8
+R7
 r1
 !s85 0
 31
-Z19 !s108 1661188250.747000
-Z20 !s107 Digital_Clock.vt|
-Z21 !s90 -work|work|Digital_Clock.vt|
+Z20 !s108 1661233172.968000
+Z21 !s107 Digital_Clock.vt|
+Z22 !s90 -work|work|Digital_Clock.vt|
 !s101 -O0
-R10
-Z22 n@t@o@p_vlg_check_tst
+R9
+Z23 n@t@o@p_vlg_check_tst
 vTOP_vlg_sample_tst
 !i10b 1
-Z23 !s100 TG]gOQ5Y5gacKV34?KP`E3
-Z24 IV;`c1_KT:06m[DO1NfG`F3
-Z25 VFD]5KQKaK[BUc6dd;Z9j@0
-R4
-R5
+Z24 !s100 TG]gOQ5Y5gacKV34?KP`E3
+Z25 IV;`c1_KT:06m[DO1NfG`F3
+Z26 VFD]5KQKaK[BUc6dd;Z9j@0
+R3
 R17
 R18
+R19
 L0 29
-R8
+R7
 r1
 !s85 0
 31
-R19
 R20
 R21
+R22
 !s101 -O0
-R10
-Z26 n@t@o@p_vlg_sample_tst
+R9
+Z27 n@t@o@p_vlg_sample_tst
 vTOP_vlg_vec_tst
 !i10b 1
-!s100 WEXXjm3`@eHn0NY__4=iE2
-I_6=C9@W8z8bj?IUU35czc3
-Z27 VBDbZc5TUj`4DT17_5R<4L1
-R4
-R5
+Z28 !s100 WEXXjm3`@eHn0NY__4=iE2
+Z29 I_6=C9@W8z8bj?IUU35czc3
+Z30 VBDbZc5TUj`4DT17_5R<4L1
+R3
 R17
 R18
-Z28 L0 670
-R8
+R19
+Z31 L0 670
+R7
 r1
 !s85 0
 31
-R19
 R20
 R21
+R22
 !s101 -O0
-R10
-Z29 n@t@o@p_vlg_vec_tst
+R9
+Z32 n@t@o@p_vlg_vec_tst

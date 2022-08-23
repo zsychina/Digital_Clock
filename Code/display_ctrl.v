@@ -7,29 +7,32 @@ module display_ctrl(
     input   [3:0]   min_shi,
     input   [3:0]   hour_ge,
     input   [3:0]   hour_shi,
+	 
     output  [7:0]   data_out,
     output  [7:0]   select
 );
 
-reg [7:0]  data;    //数码管段选信号
+reg [7:0]  data;    //数码管段选信号	
 reg [7:0]  sel;     //数码管位选信号
 reg [3:0]  display_data=0;
 
 //============================数码管动态刷新============================//
-reg [10:0] m=0;
+reg [10:0] m=0; 
  
 always @ ( posedge clk or negedge rst_n)    begin
-    if(!rst_n)  begin
+    if(!rst_n)  begin  // rst_n=0 异步清零
         m <= 0;
     end
-    else    begin
+    else    begin      // rst_n!=0 正常时
         m <= m+1;
     end
 end  
 
 //----------------数码管位选-------------------//
 always@( posedge clk)   begin
-    case(m[5:3])
+    case(m[5:3])   // m: [10] [9] [8] [7] [6] <![5] [4] [3]!> [2] [1] [0]
+                   //                            4   2   1
+                   // 选 [5:3] 起到控制刷新频率的作用 
         0: begin
             display_data<=4'b0000;
             sel<=8'b1111_1110;
@@ -67,11 +70,11 @@ always@( posedge clk)   begin
             sel<=8'b0;
         end 
     endcase  
-end
+end 
 
 //---------------数码管段选-----------------//
 always @(display_data)  begin
-    case(display_data)                      //七段译码
+    case(display_data)                      //七段译码，data[7]恒赋1(忽略即可)，其他一样
         4'h0:data = 8'hc0;//显示0
         4'h1:data = 8'hf9;//显示1
         4'h2:data = 8'ha4;//显示2

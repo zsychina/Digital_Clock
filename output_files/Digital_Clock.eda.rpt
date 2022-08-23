@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Digital_Clock
-Tue Aug 23 01:10:49 2022
+Tue Aug 23 13:52:35 2022
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Aug 23 01:10:49 2022 ;
+; EDA Netlist Writer Status ; Successful - Tue Aug 23 13:52:35 2022 ;
 ; Revision Name             ; Digital_Clock                         ;
 ; Top-level Entity Name     ; TOP                                   ;
 ; Family                    ; Cyclone IV E                          ;
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Tue Aug 23 01:10:49 2022
-Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Digital_Clock -c Digital_Clock
+    Info: Processing started: Tue Aug 23 13:52:35 2022
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Digital_Clock -c Digital_Clock
 Info (204019): Generated file Digital_Clock.vo in folder "E:/FPGA/Digital_Clock/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 338 megabytes
-    Info: Processing ended: Tue Aug 23 01:10:49 2022
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Tue Aug 23 13:52:35 2022
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
