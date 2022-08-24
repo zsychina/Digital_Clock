@@ -24,6 +24,12 @@ entity TOP is
         hour_ge_r       : out    vl_logic_vector(3 downto 0);
         hour_shi_r      : out    vl_logic_vector(3 downto 0);
         data_out        : out    vl_logic_vector(7 downto 0);
-        \select\        : out    vl_logic_vector(7 downto 0)
+        \select\        : out    vl_logic_vector(7 downto 0);
+        out_sec_ge_seg  : out    vl_logic_vector(6 downto 0);
+        out_sec_shi_seg : out    vl_logic_vector(6 downto 0);
+        out_min_ge_seg  : out    vl_logic_vector(6 downto 0);
+        out_min_shi_seg : out    vl_logic_vector(6 downto 0);
+        out_hour_ge_seg : out    vl_logic_vector(6 downto 0);
+        out_hour_shi_seg: out    vl_logic_vector(6 downto 0)
     );
 end TOP;

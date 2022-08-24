@@ -1,96 +1,125 @@
-module display_ctrl(
-    input   clk,
-    input   rst_n,
+module display_ctrl (
+    input clk,
+    input rst_n,
     input   [3:0]   sec_ge,
     input   [3:0]   sec_shi,
     input   [3:0]   min_ge,
     input   [3:0]   min_shi,
     input   [3:0]   hour_ge,
     input   [3:0]   hour_shi,
-	 
-    output  [7:0]   data_out,
-    output  [7:0]   select
+
+    output [6:0] out_sec_ge_seg,
+    output [6:0] out_sec_shi_seg,
+    output [6:0] out_min_ge_seg,
+    output [6:0] out_min_shi_seg,
+    output [6:0] out_hour_ge_seg,
+    output [6:0] out_hour_shi_seg
 );
 
-reg [7:0]  data;    //数码管段选信号	
-reg [7:0]  sel;     //数码管位选信号
-reg [3:0]  display_data=0;
+reg [6:0] out_sec_ge;
+reg [6:0] out_sec_shi;
+reg [6:0] out_min_ge;
+reg [6:0] out_min_shi;
+reg [6:0] out_hour_ge;
+reg [6:0] out_hour_shi;
 
-//============================数码管动态刷新============================//
-reg [10:0] m=0; 
- 
-always @ ( posedge clk or negedge rst_n)    begin
-    if(!rst_n)  begin  // rst_n=0 异步清零
-        m <= 0;
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin // rst_n = 0
+        out_sec_ge<=0;
+        out_sec_shi<=0;
+        out_min_ge<=0;
+        out_min_shi<=0;
+        out_hour_ge<=0;
+        out_hour_shi<=0;
     end
-    else    begin      // rst_n!=0 正常时
-        m <= m+1;
-    end
-end  
-
-//----------------数码管位选-------------------//
-always@( posedge clk)   begin
-    case(m[5:3])   // m: [10] [9] [8] [7] [6] <![5] [4] [3]!> [2] [1] [0]
-                   //                            4   2   1
-                   // 选 [5:3] 起到控制刷新频率的作用 
-        0: begin
-            display_data<=4'b0000;
-            sel<=8'b1111_1110;
-        end
-        1: begin
-            display_data<=4'b0000;
-            sel<=8'b1111_1101;
-        end
-        2: begin
-            display_data<=hour_shi;
-            sel<=8'b1111_1011;
-        end
-        3: begin
-            display_data<=hour_ge;
-            sel<=8'b1111_0111;
-        end
-        4: begin
-            display_data<=min_shi;
-            sel<=8'b1110_1111;
-        end
-        5: begin
-            display_data<=min_ge;
-            sel<=8'b1101_1111;
-        end
-        6: begin
-            display_data<=sec_shi;
-            sel<=8'b1011_1111;
-        end
-        7: begin
-            display_data<=sec_ge;
-            sel<=8'b0111_1111;
-        end
-        default:begin
-            data<=8'b0;
-            sel<=8'b0;
-        end 
-    endcase  
-end 
-
-//---------------数码管段选-----------------//
-always @(display_data)  begin
-    case(display_data)                      //七段译码，data[7]恒赋1(忽略即可)，其他一样
-        4'h0:data = 8'hc0;//显示0
-        4'h1:data = 8'hf9;//显示1
-        4'h2:data = 8'ha4;//显示2
-        4'h3:data = 8'hb0;//显示3
-        4'h4:data = 8'h99;//显示4
-        4'h5:data = 8'h92;//显示5
-        4'h6:data = 8'h82;//显示6
-        4'h7:data = 8'hf8;//显示7
-        4'h8:data = 8'h80;//显示8
-        4'h9:data = 8'h90;//显示9
-        default data = data;
-    endcase
+    else begin
+        case(sec_ge)
+            4'h0:out_sec_ge = 7'b100_0000;//显示0
+            4'h1:out_sec_ge = 7'b111_1001;//显示1
+            4'h2:out_sec_ge = 7'b010_0100;//显示2
+            4'h3:out_sec_ge = 7'b011_0000;//显示3
+            4'h4:out_sec_ge = 7'b001_1001;//显示4
+            4'h5:out_sec_ge = 7'b001_0010;//显示5
+            4'h6:out_sec_ge = 7'b000_0010;//显示6
+            4'h7:out_sec_ge = 7'b111_1000;//显示7
+            4'h8:out_sec_ge = 7'b000_0000;//显示8
+            4'h9:out_sec_ge = 7'b001_0000;//显示9
+            default out_sec_ge = out_sec_ge;
+        endcase
+        case(sec_shi)
+            4'h0:out_sec_shi = 7'b100_0000;//显示0
+            4'h1:out_sec_shi = 7'b111_1001;//显示1
+            4'h2:out_sec_shi = 7'b010_0100;//显示2
+            4'h3:out_sec_shi = 7'b011_0000;//显示3
+            4'h4:out_sec_shi = 7'b001_1001;//显示4
+            4'h5:out_sec_shi = 7'b001_0010;//显示5
+            4'h6:out_sec_shi = 7'b000_0010;//显示6
+            4'h7:out_sec_shi = 7'b111_1000;//显示7
+            4'h8:out_sec_shi = 7'b000_0000;//显示8
+            4'h9:out_sec_shi = 7'b001_0000;//显示9
+            default out_sec_shi = out_sec_shi;
+        endcase        
+        case(min_ge)                 
+            4'h0:out_min_ge = 7'b100_0000;//显示0
+            4'h1:out_min_ge = 7'b111_1001;//显示1
+            4'h2:out_min_ge = 7'b010_0100;//显示2
+            4'h3:out_min_ge = 7'b011_0000;//显示3
+            4'h4:out_min_ge = 7'b001_1001;//显示4
+            4'h5:out_min_ge = 7'b001_0010;//显示5
+            4'h6:out_min_ge = 7'b000_0010;//显示6
+            4'h7:out_min_ge = 7'b111_1000;//显示7
+            4'h8:out_min_ge = 7'b000_0000;//显示8
+            4'h9:out_min_ge = 7'b001_0000;//显示9
+            default out_min_ge = out_min_ge;
+        endcase     
+        case(min_shi)                 
+            4'h0:out_min_shi = 7'b100_0000;//显示0
+            4'h1:out_min_shi = 7'b111_1001;//显示1
+            4'h2:out_min_shi = 7'b010_0100;//显示2
+            4'h3:out_min_shi = 7'b011_0000;//显示3
+            4'h4:out_min_shi = 7'b001_1001;//显示4
+            4'h5:out_min_shi = 7'b001_0010;//显示5
+            4'h6:out_min_shi = 7'b000_0010;//显示6
+            4'h7:out_min_shi = 7'b111_1000;//显示7
+            4'h8:out_min_shi = 7'b000_0000;//显示8
+            4'h9:out_min_shi = 7'b001_0000;//显示9
+            default out_min_shi = out_min_shi;
+        endcase     
+        case(hour_ge)                 
+            4'h0:out_hour_ge = 7'b100_0000;//显示0
+            4'h1:out_hour_ge = 7'b111_1001;//显示1
+            4'h2:out_hour_ge = 7'b010_0100;//显示2
+            4'h3:out_hour_ge = 7'b011_0000;//显示3
+            4'h4:out_hour_ge = 7'b001_1001;//显示4
+            4'h5:out_hour_ge = 7'b001_0010;//显示5
+            4'h6:out_hour_ge = 7'b000_0010;//显示6
+            4'h7:out_hour_ge = 7'b111_1000;//显示7
+            4'h8:out_hour_ge = 7'b000_0000;//显示8
+            4'h9:out_hour_ge = 7'b001_0000;//显示9
+            default out_hour_ge = out_hour_ge;
+        endcase    
+        case(hour_shi)                 
+            4'h0:out_hour_shi = 7'b100_0000;//显示0
+            4'h1:out_hour_shi = 7'b111_1001;//显示1
+            4'h2:out_hour_shi = 7'b010_0100;//显示2
+            4'h3:out_hour_shi = 7'b011_0000;//显示3
+            4'h4:out_hour_shi = 7'b001_1001;//显示4
+            4'h5:out_hour_shi = 7'b001_0010;//显示5
+            4'h6:out_hour_shi = 7'b000_0010;//显示6
+            4'h7:out_hour_shi = 7'b111_1000;//显示7
+            4'h8:out_hour_shi = 7'b000_0000;//显示8
+            4'h9:out_hour_shi = 7'b001_0000;//显示9
+            default out_hour_shi = out_hour_shi;
+        endcase     
+    end 
 end
-//======================================================================//
 
-assign  select = sel;
-assign  data_out = data;
+assign out_sec_ge_seg = out_sec_ge;
+assign out_sec_shi_seg = out_sec_ge;
+assign out_min_ge_seg = out_min_ge;
+assign out_min_shi_seg = out_min_shi;
+assign out_hour_ge_seg = out_hour_ge;
+assign out_hour_shi_seg = out_hour_shi;
+
 
 endmodule

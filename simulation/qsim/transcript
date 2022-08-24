@@ -27,5 +27,5 @@
 # Loading work.TOP_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : Digital_Clock.vt(666)
+# ** Note: $finish    : Digital_Clock.vt(825)
 #    Time: 1 us  Iteration: 0  Instance: /TOP_vlg_vec_tst/tb_out
