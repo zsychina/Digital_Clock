@@ -25,9 +25,6 @@ module TOP(
     output	[3:0]	hour_ge_r,
     output	[3:0]	hour_shi_r,
 
-    output  [7:0]   data_out,		
-    output  [7:0]   select,
-     
      //数码管输出
     output [6:0] out_sec_ge_seg,
     output [6:0] out_sec_shi_seg,
@@ -60,7 +57,7 @@ assign	hour_ge_r = hour_ge_rr;
 assign	hour_shi_r = hour_shi_rr;
 
 assign out_sec_ge_seg = out_sec_ge_seg_temp;
-assign out_sec_shi_seg = out_sec_ge_seg_temp;
+assign out_sec_shi_seg = out_sec_shi_seg_temp;
 assign out_min_ge_seg = out_min_ge_seg_temp;
 assign out_min_shi_seg = out_min_shi_seg_temp;
 assign out_hour_ge_seg = out_hour_ge_seg_temp;
@@ -95,26 +92,6 @@ time_control			time_control_inst(
     .hour_ge_r			(hour_ge_rr),
     .hour_shi_r			(hour_shi_rr)
 );
-//-----------------------------//
-// display_ctrl		display_ctrl_inst(
-//     .clk			   (clk),
-//     .rst_n			(rst_n),
-//     .sec_ge			(sec_ge_rr),
-//     .sec_shi		(sec_shi_rr),
-//     .min_ge			(min_ge_rr),
-//     .min_shi		(min_shi_rr),
-//     .hour_ge		(hour_ge_rr),
-//     .hour_shi		(hour_shi_rr),
-//     .data_out		(data_out),
-//     .select			(select)
-     
-// 	//  .out_sec_ge_seg		(out_sec_ge_seg),
-//     // .out_sec_shi_seg    (out_sec_shi_seg),
-// 	//  .out_min_ge_seg     (out_min_ge_seg),
-//     // .out_min_shi_seg    (out_min_shi_seg),
-// 	//  .out_hour_ge_seg    (out_hour_ge_seg),
-// 	//  .out_hour_shi_seg   (out_hour_shi_seg)
-// );
 
 display_ctrl	display_ctrl_inst(
     .clk        (clk),

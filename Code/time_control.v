@@ -1,5 +1,3 @@
-// there exist some replaced variables in this module for simulation
-// need to be restored if it neended to be downloaded into device
 module time_control(
     input	clk,
     input	rst_n,
@@ -30,7 +28,7 @@ module time_control(
 //=================时钟模块====================//
 //---------1ms延时-------//
 // divider
-// branch dlut22: considering the clk is 50MHz, the ms class delay should be a mod 5e3(16'd4999=16'b0001_0011_1000_0111) divider
+// branch dlut22: considering the clk is 50MHz, the ms class delay should be a mod 5e4(16'd49999=16'b1100_0011_0100_1111) divider
 //
 reg		[15:0]	cnt_1ms;	//1ms计数
 reg 	flag_1ms;			//ms进位信号
@@ -85,7 +83,7 @@ always @(posedge clk or negedge rst_n) begin
         sec_ge <= 0;
         flag_sec_ge <= 0;
     end
-    else if(set_time_finish)	begin
+    else if(!set_time_finish)	begin
         sec_ge <= set_sec_ge;
         flag_sec_ge <= 0;
     end
@@ -109,7 +107,7 @@ always @(posedge clk or negedge rst_n) begin
         sec_shi <= 0;
         flag_sec_shi <= 0;
     end
-    else if(set_time_finish)	begin
+    else if(!set_time_finish)	begin
         sec_shi <= set_sec_shi;
         flag_sec_shi <= 0;
     end		
@@ -140,7 +138,7 @@ always @(posedge clk or negedge rst_n) begin
         min_ge <= 0;
         flag_min_ge <= 0;
     end
-    else if(set_time_finish)	begin
+    else if(!set_time_finish)	begin
         min_ge <= set_min_ge;
         flag_min_ge <= 0;
     end	
@@ -164,7 +162,7 @@ always @(posedge clk or negedge rst_n) begin
         min_shi <= 0;
         flag_min_shi <= 0;
     end
-    else if(set_time_finish)	begin
+    else if(!set_time_finish)	begin
         min_shi <= set_min_shi;
         flag_min_shi <= 0;
     end
@@ -195,7 +193,7 @@ always @(posedge clk or negedge rst_n) begin
         hour_ge <= 0;
         flag_hour_ge <= 0;
     end
-    else if(set_time_finish)	begin
+    else if(!set_time_finish)	begin
         hour_ge <= set_hour_ge;
         flag_hour_ge <= 0;
     end	
@@ -223,7 +221,7 @@ always @(posedge clk or negedge rst_n) begin
         hour_shi <= 0;
         flag_hour_shi <= 0;
     end
-    else if(set_time_finish)	begin
+    else if(!set_time_finish)	begin
         hour_shi <= set_hour_shi;
         flag_hour_shi <= 0;
     end		

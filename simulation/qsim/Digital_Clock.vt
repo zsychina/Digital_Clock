@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/24/2022 17:33:32"
+// Generated on "10/16/2022 19:31:14"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    TOP
 // 
@@ -82,7 +82,6 @@ endmodule
 
 module TOP_vlg_check_tst (
 	clock_out,
-	data_out,
 	hour_ge_r,
 	hour_shi_r,
 	min_ge_r,
@@ -95,11 +94,9 @@ module TOP_vlg_check_tst (
 	out_sec_shi_seg,
 	sec_ge_r,
 	sec_shi_r,
-	select,
 	sampler_rx
 );
 input  clock_out;
-input [7:0] data_out;
 input [3:0] hour_ge_r;
 input [3:0] hour_shi_r;
 input [3:0] min_ge_r;
@@ -112,11 +109,9 @@ input [6:0] out_sec_ge_seg;
 input [6:0] out_sec_shi_seg;
 input [3:0] sec_ge_r;
 input [3:0] sec_shi_r;
-input [7:0] select;
 input sampler_rx;
 
 reg  clock_out_expected;
-reg [7:0] data_out_expected;
 reg [3:0] hour_ge_r_expected;
 reg [3:0] hour_shi_r_expected;
 reg [3:0] min_ge_r_expected;
@@ -129,10 +124,8 @@ reg [6:0] out_sec_ge_seg_expected;
 reg [6:0] out_sec_shi_seg_expected;
 reg [3:0] sec_ge_r_expected;
 reg [3:0] sec_shi_r_expected;
-reg [7:0] select_expected;
 
 reg  clock_out_prev;
-reg [7:0] data_out_prev;
 reg [3:0] hour_ge_r_prev;
 reg [3:0] hour_shi_r_prev;
 reg [3:0] min_ge_r_prev;
@@ -145,13 +138,13 @@ reg [6:0] out_sec_ge_seg_prev;
 reg [6:0] out_sec_shi_seg_prev;
 reg [3:0] sec_ge_r_prev;
 reg [3:0] sec_shi_r_prev;
-reg [7:0] select_prev;
 
 reg [3:0] hour_ge_r_expected_prev;
 reg [3:0] hour_shi_r_expected_prev;
 reg [3:0] min_ge_r_expected_prev;
 reg [3:0] min_shi_r_expected_prev;
 reg [6:0] out_sec_ge_seg_expected_prev;
+reg [6:0] out_sec_shi_seg_expected_prev;
 reg [3:0] sec_ge_r_expected_prev;
 reg [3:0] sec_shi_r_expected_prev;
 
@@ -160,6 +153,7 @@ reg [3:0] last_hour_shi_r_exp;
 reg [3:0] last_min_ge_r_exp;
 reg [3:0] last_min_shi_r_exp;
 reg [6:0] last_out_sec_ge_seg_exp;
+reg [6:0] last_out_sec_shi_seg_exp;
 reg [3:0] last_sec_ge_r_exp;
 reg [3:0] last_sec_shi_r_exp;
 
@@ -168,7 +162,7 @@ reg trigger;
 integer i;
 integer nummismatches;
 
-reg [1:15] on_first_change ;
+reg [1:13] on_first_change ;
 
 
 initial
@@ -176,7 +170,7 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 15'b1;
+on_first_change = 13'b1;
 end
 
 // update real /o prevs
@@ -184,7 +178,6 @@ end
 always @(trigger)
 begin
 	clock_out_prev = clock_out;
-	data_out_prev = data_out;
 	hour_ge_r_prev = hour_ge_r;
 	hour_shi_r_prev = hour_shi_r;
 	min_ge_r_prev = min_ge_r;
@@ -197,7 +190,6 @@ begin
 	out_sec_shi_seg_prev = out_sec_shi_seg;
 	sec_ge_r_prev = sec_ge_r;
 	sec_shi_r_prev = sec_shi_r;
-	select_prev = select;
 end
 
 // update expected /o prevs
@@ -209,6 +201,7 @@ begin
 	min_ge_r_expected_prev = min_ge_r_expected;
 	min_shi_r_expected_prev = min_shi_r_expected;
 	out_sec_ge_seg_expected_prev = out_sec_ge_seg_expected;
+	out_sec_shi_seg_expected_prev = out_sec_shi_seg_expected;
 	sec_ge_r_expected_prev = sec_ge_r_expected;
 	sec_shi_r_expected_prev = sec_shi_r_expected;
 end
@@ -393,8 +386,43 @@ initial
 begin
 	out_sec_ge_seg_expected[0] = 1'bX;
 end 
+// expected out_sec_shi_seg[ 6 ]
+initial
+begin
+	out_sec_shi_seg_expected[6] = 1'bX;
+end 
+// expected out_sec_shi_seg[ 5 ]
+initial
+begin
+	out_sec_shi_seg_expected[5] = 1'bX;
+end 
+// expected out_sec_shi_seg[ 4 ]
+initial
+begin
+	out_sec_shi_seg_expected[4] = 1'bX;
+end 
+// expected out_sec_shi_seg[ 3 ]
+initial
+begin
+	out_sec_shi_seg_expected[3] = 1'bX;
+end 
+// expected out_sec_shi_seg[ 2 ]
+initial
+begin
+	out_sec_shi_seg_expected[2] = 1'bX;
+end 
+// expected out_sec_shi_seg[ 1 ]
+initial
+begin
+	out_sec_shi_seg_expected[1] = 1'bX;
+end 
+// expected out_sec_shi_seg[ 0 ]
+initial
+begin
+	out_sec_shi_seg_expected[0] = 1'bX;
+end 
 // generate trigger
-always @(clock_out_expected or clock_out or data_out_expected or data_out or hour_ge_r_expected or hour_ge_r or hour_shi_r_expected or hour_shi_r or min_ge_r_expected or min_ge_r or min_shi_r_expected or min_shi_r or out_hour_ge_seg_expected or out_hour_ge_seg or out_hour_shi_seg_expected or out_hour_shi_seg or out_min_ge_seg_expected or out_min_ge_seg or out_min_shi_seg_expected or out_min_shi_seg or out_sec_ge_seg_expected or out_sec_ge_seg or out_sec_shi_seg_expected or out_sec_shi_seg or sec_ge_r_expected or sec_ge_r or sec_shi_r_expected or sec_shi_r or select_expected or select)
+always @(clock_out_expected or clock_out or hour_ge_r_expected or hour_ge_r or hour_shi_r_expected or hour_shi_r or min_ge_r_expected or min_ge_r or min_shi_r_expected or min_shi_r or out_hour_ge_seg_expected or out_hour_ge_seg or out_hour_shi_seg_expected or out_hour_shi_seg or out_min_ge_seg_expected or out_min_ge_seg or out_min_shi_seg_expected or out_min_shi_seg or out_sec_ge_seg_expected or out_sec_ge_seg or out_sec_shi_seg_expected or out_sec_shi_seg or sec_ge_r_expected or sec_ge_r or sec_shi_r_expected or sec_shi_r)
 begin
 	trigger <= ~trigger;
 end
@@ -404,410 +432,501 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected clock_out = %b | expected data_out = %b | expected hour_ge_r = %b | expected hour_shi_r = %b | expected min_ge_r = %b | expected min_shi_r = %b | expected out_hour_ge_seg = %b | expected out_hour_shi_seg = %b | expected out_min_ge_seg = %b | expected out_min_shi_seg = %b | expected out_sec_ge_seg = %b | expected out_sec_shi_seg = %b | expected sec_ge_r = %b | expected sec_shi_r = %b | expected select = %b | ",clock_out_expected_prev,data_out_expected_prev,hour_ge_r_expected_prev,hour_shi_r_expected_prev,min_ge_r_expected_prev,min_shi_r_expected_prev,out_hour_ge_seg_expected_prev,out_hour_shi_seg_expected_prev,out_min_ge_seg_expected_prev,out_min_shi_seg_expected_prev,out_sec_ge_seg_expected_prev,out_sec_shi_seg_expected_prev,sec_ge_r_expected_prev,sec_shi_r_expected_prev,select_expected_prev);
-	$display("| real clock_out = %b | real data_out = %b | real hour_ge_r = %b | real hour_shi_r = %b | real min_ge_r = %b | real min_shi_r = %b | real out_hour_ge_seg = %b | real out_hour_shi_seg = %b | real out_min_ge_seg = %b | real out_min_shi_seg = %b | real out_sec_ge_seg = %b | real out_sec_shi_seg = %b | real sec_ge_r = %b | real sec_shi_r = %b | real select = %b | ",clock_out_prev,data_out_prev,hour_ge_r_prev,hour_shi_r_prev,min_ge_r_prev,min_shi_r_prev,out_hour_ge_seg_prev,out_hour_shi_seg_prev,out_min_ge_seg_prev,out_min_shi_seg_prev,out_sec_ge_seg_prev,out_sec_shi_seg_prev,sec_ge_r_prev,sec_shi_r_prev,select_prev);
+	$display("| expected clock_out = %b | expected hour_ge_r = %b | expected hour_shi_r = %b | expected min_ge_r = %b | expected min_shi_r = %b | expected out_hour_ge_seg = %b | expected out_hour_shi_seg = %b | expected out_min_ge_seg = %b | expected out_min_shi_seg = %b | expected out_sec_ge_seg = %b | expected out_sec_shi_seg = %b | expected sec_ge_r = %b | expected sec_shi_r = %b | ",clock_out_expected_prev,hour_ge_r_expected_prev,hour_shi_r_expected_prev,min_ge_r_expected_prev,min_shi_r_expected_prev,out_hour_ge_seg_expected_prev,out_hour_shi_seg_expected_prev,out_min_ge_seg_expected_prev,out_min_shi_seg_expected_prev,out_sec_ge_seg_expected_prev,out_sec_shi_seg_expected_prev,sec_ge_r_expected_prev,sec_shi_r_expected_prev);
+	$display("| real clock_out = %b | real hour_ge_r = %b | real hour_shi_r = %b | real min_ge_r = %b | real min_shi_r = %b | real out_hour_ge_seg = %b | real out_hour_shi_seg = %b | real out_min_ge_seg = %b | real out_min_shi_seg = %b | real out_sec_ge_seg = %b | real out_sec_shi_seg = %b | real sec_ge_r = %b | real sec_shi_r = %b | ",clock_out_prev,hour_ge_r_prev,hour_shi_r_prev,min_ge_r_prev,min_shi_r_prev,out_hour_ge_seg_prev,out_hour_shi_seg_prev,out_min_ge_seg_prev,out_min_shi_seg_prev,out_sec_ge_seg_prev,out_sec_shi_seg_prev,sec_ge_r_prev,sec_shi_r_prev);
 `endif
 	if (
 		( hour_ge_r_expected_prev[0] !== 1'bx ) && ( hour_ge_r_prev[0] !== hour_ge_r_expected_prev[0] )
 		&& ((hour_ge_r_expected_prev[0] !== last_hour_ge_r_exp[0]) ||
-			on_first_change[3])
+			on_first_change[2])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_ge_r[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_ge_r_expected_prev);
 		$display ("     Real value = %b", hour_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[3] = 1'b0;
+		on_first_change[2] = 1'b0;
 		last_hour_ge_r_exp[0] = hour_ge_r_expected_prev[0];
 	end
 	if (
 		( hour_ge_r_expected_prev[1] !== 1'bx ) && ( hour_ge_r_prev[1] !== hour_ge_r_expected_prev[1] )
 		&& ((hour_ge_r_expected_prev[1] !== last_hour_ge_r_exp[1]) ||
-			on_first_change[3])
+			on_first_change[2])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_ge_r[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_ge_r_expected_prev);
 		$display ("     Real value = %b", hour_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[3] = 1'b0;
+		on_first_change[2] = 1'b0;
 		last_hour_ge_r_exp[1] = hour_ge_r_expected_prev[1];
 	end
 	if (
 		( hour_ge_r_expected_prev[2] !== 1'bx ) && ( hour_ge_r_prev[2] !== hour_ge_r_expected_prev[2] )
 		&& ((hour_ge_r_expected_prev[2] !== last_hour_ge_r_exp[2]) ||
-			on_first_change[3])
+			on_first_change[2])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_ge_r[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_ge_r_expected_prev);
 		$display ("     Real value = %b", hour_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[3] = 1'b0;
+		on_first_change[2] = 1'b0;
 		last_hour_ge_r_exp[2] = hour_ge_r_expected_prev[2];
 	end
 	if (
 		( hour_ge_r_expected_prev[3] !== 1'bx ) && ( hour_ge_r_prev[3] !== hour_ge_r_expected_prev[3] )
 		&& ((hour_ge_r_expected_prev[3] !== last_hour_ge_r_exp[3]) ||
-			on_first_change[3])
+			on_first_change[2])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_ge_r[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_ge_r_expected_prev);
 		$display ("     Real value = %b", hour_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[3] = 1'b0;
+		on_first_change[2] = 1'b0;
 		last_hour_ge_r_exp[3] = hour_ge_r_expected_prev[3];
 	end
 	if (
 		( hour_shi_r_expected_prev[0] !== 1'bx ) && ( hour_shi_r_prev[0] !== hour_shi_r_expected_prev[0] )
 		&& ((hour_shi_r_expected_prev[0] !== last_hour_shi_r_exp[0]) ||
-			on_first_change[4])
+			on_first_change[3])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_shi_r[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_shi_r_expected_prev);
 		$display ("     Real value = %b", hour_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[4] = 1'b0;
+		on_first_change[3] = 1'b0;
 		last_hour_shi_r_exp[0] = hour_shi_r_expected_prev[0];
 	end
 	if (
 		( hour_shi_r_expected_prev[1] !== 1'bx ) && ( hour_shi_r_prev[1] !== hour_shi_r_expected_prev[1] )
 		&& ((hour_shi_r_expected_prev[1] !== last_hour_shi_r_exp[1]) ||
-			on_first_change[4])
+			on_first_change[3])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_shi_r[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_shi_r_expected_prev);
 		$display ("     Real value = %b", hour_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[4] = 1'b0;
+		on_first_change[3] = 1'b0;
 		last_hour_shi_r_exp[1] = hour_shi_r_expected_prev[1];
 	end
 	if (
 		( hour_shi_r_expected_prev[2] !== 1'bx ) && ( hour_shi_r_prev[2] !== hour_shi_r_expected_prev[2] )
 		&& ((hour_shi_r_expected_prev[2] !== last_hour_shi_r_exp[2]) ||
-			on_first_change[4])
+			on_first_change[3])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_shi_r[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_shi_r_expected_prev);
 		$display ("     Real value = %b", hour_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[4] = 1'b0;
+		on_first_change[3] = 1'b0;
 		last_hour_shi_r_exp[2] = hour_shi_r_expected_prev[2];
 	end
 	if (
 		( hour_shi_r_expected_prev[3] !== 1'bx ) && ( hour_shi_r_prev[3] !== hour_shi_r_expected_prev[3] )
 		&& ((hour_shi_r_expected_prev[3] !== last_hour_shi_r_exp[3]) ||
-			on_first_change[4])
+			on_first_change[3])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port hour_shi_r[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", hour_shi_r_expected_prev);
 		$display ("     Real value = %b", hour_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[4] = 1'b0;
+		on_first_change[3] = 1'b0;
 		last_hour_shi_r_exp[3] = hour_shi_r_expected_prev[3];
 	end
 	if (
 		( min_ge_r_expected_prev[0] !== 1'bx ) && ( min_ge_r_prev[0] !== min_ge_r_expected_prev[0] )
 		&& ((min_ge_r_expected_prev[0] !== last_min_ge_r_exp[0]) ||
-			on_first_change[5])
+			on_first_change[4])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_ge_r[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_ge_r_expected_prev);
 		$display ("     Real value = %b", min_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
+		on_first_change[4] = 1'b0;
 		last_min_ge_r_exp[0] = min_ge_r_expected_prev[0];
 	end
 	if (
 		( min_ge_r_expected_prev[1] !== 1'bx ) && ( min_ge_r_prev[1] !== min_ge_r_expected_prev[1] )
 		&& ((min_ge_r_expected_prev[1] !== last_min_ge_r_exp[1]) ||
-			on_first_change[5])
+			on_first_change[4])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_ge_r[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_ge_r_expected_prev);
 		$display ("     Real value = %b", min_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
+		on_first_change[4] = 1'b0;
 		last_min_ge_r_exp[1] = min_ge_r_expected_prev[1];
 	end
 	if (
 		( min_ge_r_expected_prev[2] !== 1'bx ) && ( min_ge_r_prev[2] !== min_ge_r_expected_prev[2] )
 		&& ((min_ge_r_expected_prev[2] !== last_min_ge_r_exp[2]) ||
-			on_first_change[5])
+			on_first_change[4])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_ge_r[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_ge_r_expected_prev);
 		$display ("     Real value = %b", min_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
+		on_first_change[4] = 1'b0;
 		last_min_ge_r_exp[2] = min_ge_r_expected_prev[2];
 	end
 	if (
 		( min_ge_r_expected_prev[3] !== 1'bx ) && ( min_ge_r_prev[3] !== min_ge_r_expected_prev[3] )
 		&& ((min_ge_r_expected_prev[3] !== last_min_ge_r_exp[3]) ||
-			on_first_change[5])
+			on_first_change[4])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_ge_r[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_ge_r_expected_prev);
 		$display ("     Real value = %b", min_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
+		on_first_change[4] = 1'b0;
 		last_min_ge_r_exp[3] = min_ge_r_expected_prev[3];
 	end
 	if (
 		( min_shi_r_expected_prev[0] !== 1'bx ) && ( min_shi_r_prev[0] !== min_shi_r_expected_prev[0] )
 		&& ((min_shi_r_expected_prev[0] !== last_min_shi_r_exp[0]) ||
-			on_first_change[6])
+			on_first_change[5])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_shi_r[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_shi_r_expected_prev);
 		$display ("     Real value = %b", min_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[6] = 1'b0;
+		on_first_change[5] = 1'b0;
 		last_min_shi_r_exp[0] = min_shi_r_expected_prev[0];
 	end
 	if (
 		( min_shi_r_expected_prev[1] !== 1'bx ) && ( min_shi_r_prev[1] !== min_shi_r_expected_prev[1] )
 		&& ((min_shi_r_expected_prev[1] !== last_min_shi_r_exp[1]) ||
-			on_first_change[6])
+			on_first_change[5])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_shi_r[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_shi_r_expected_prev);
 		$display ("     Real value = %b", min_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[6] = 1'b0;
+		on_first_change[5] = 1'b0;
 		last_min_shi_r_exp[1] = min_shi_r_expected_prev[1];
 	end
 	if (
 		( min_shi_r_expected_prev[2] !== 1'bx ) && ( min_shi_r_prev[2] !== min_shi_r_expected_prev[2] )
 		&& ((min_shi_r_expected_prev[2] !== last_min_shi_r_exp[2]) ||
-			on_first_change[6])
+			on_first_change[5])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_shi_r[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_shi_r_expected_prev);
 		$display ("     Real value = %b", min_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[6] = 1'b0;
+		on_first_change[5] = 1'b0;
 		last_min_shi_r_exp[2] = min_shi_r_expected_prev[2];
 	end
 	if (
 		( min_shi_r_expected_prev[3] !== 1'bx ) && ( min_shi_r_prev[3] !== min_shi_r_expected_prev[3] )
 		&& ((min_shi_r_expected_prev[3] !== last_min_shi_r_exp[3]) ||
-			on_first_change[6])
+			on_first_change[5])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port min_shi_r[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", min_shi_r_expected_prev);
 		$display ("     Real value = %b", min_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[6] = 1'b0;
+		on_first_change[5] = 1'b0;
 		last_min_shi_r_exp[3] = min_shi_r_expected_prev[3];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[0] !== 1'bx ) && ( out_sec_ge_seg_prev[0] !== out_sec_ge_seg_expected_prev[0] )
 		&& ((out_sec_ge_seg_expected_prev[0] !== last_out_sec_ge_seg_exp[0]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[0] = out_sec_ge_seg_expected_prev[0];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[1] !== 1'bx ) && ( out_sec_ge_seg_prev[1] !== out_sec_ge_seg_expected_prev[1] )
 		&& ((out_sec_ge_seg_expected_prev[1] !== last_out_sec_ge_seg_exp[1]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[1] = out_sec_ge_seg_expected_prev[1];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[2] !== 1'bx ) && ( out_sec_ge_seg_prev[2] !== out_sec_ge_seg_expected_prev[2] )
 		&& ((out_sec_ge_seg_expected_prev[2] !== last_out_sec_ge_seg_exp[2]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[2] = out_sec_ge_seg_expected_prev[2];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[3] !== 1'bx ) && ( out_sec_ge_seg_prev[3] !== out_sec_ge_seg_expected_prev[3] )
 		&& ((out_sec_ge_seg_expected_prev[3] !== last_out_sec_ge_seg_exp[3]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[3] = out_sec_ge_seg_expected_prev[3];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[4] !== 1'bx ) && ( out_sec_ge_seg_prev[4] !== out_sec_ge_seg_expected_prev[4] )
 		&& ((out_sec_ge_seg_expected_prev[4] !== last_out_sec_ge_seg_exp[4]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[4] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[4] = out_sec_ge_seg_expected_prev[4];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[5] !== 1'bx ) && ( out_sec_ge_seg_prev[5] !== out_sec_ge_seg_expected_prev[5] )
 		&& ((out_sec_ge_seg_expected_prev[5] !== last_out_sec_ge_seg_exp[5]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[5] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[5] = out_sec_ge_seg_expected_prev[5];
 	end
 	if (
 		( out_sec_ge_seg_expected_prev[6] !== 1'bx ) && ( out_sec_ge_seg_prev[6] !== out_sec_ge_seg_expected_prev[6] )
 		&& ((out_sec_ge_seg_expected_prev[6] !== last_out_sec_ge_seg_exp[6]) ||
-			on_first_change[11])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port out_sec_ge_seg[6] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", out_sec_ge_seg_expected_prev);
 		$display ("     Real value = %b", out_sec_ge_seg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_out_sec_ge_seg_exp[6] = out_sec_ge_seg_expected_prev[6];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[0] !== 1'bx ) && ( out_sec_shi_seg_prev[0] !== out_sec_shi_seg_expected_prev[0] )
+		&& ((out_sec_shi_seg_expected_prev[0] !== last_out_sec_shi_seg_exp[0]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[0] = out_sec_shi_seg_expected_prev[0];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[1] !== 1'bx ) && ( out_sec_shi_seg_prev[1] !== out_sec_shi_seg_expected_prev[1] )
+		&& ((out_sec_shi_seg_expected_prev[1] !== last_out_sec_shi_seg_exp[1]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[1] = out_sec_shi_seg_expected_prev[1];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[2] !== 1'bx ) && ( out_sec_shi_seg_prev[2] !== out_sec_shi_seg_expected_prev[2] )
+		&& ((out_sec_shi_seg_expected_prev[2] !== last_out_sec_shi_seg_exp[2]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[2] = out_sec_shi_seg_expected_prev[2];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[3] !== 1'bx ) && ( out_sec_shi_seg_prev[3] !== out_sec_shi_seg_expected_prev[3] )
+		&& ((out_sec_shi_seg_expected_prev[3] !== last_out_sec_shi_seg_exp[3]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[3] = out_sec_shi_seg_expected_prev[3];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[4] !== 1'bx ) && ( out_sec_shi_seg_prev[4] !== out_sec_shi_seg_expected_prev[4] )
+		&& ((out_sec_shi_seg_expected_prev[4] !== last_out_sec_shi_seg_exp[4]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[4] = out_sec_shi_seg_expected_prev[4];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[5] !== 1'bx ) && ( out_sec_shi_seg_prev[5] !== out_sec_shi_seg_expected_prev[5] )
+		&& ((out_sec_shi_seg_expected_prev[5] !== last_out_sec_shi_seg_exp[5]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[5] = out_sec_shi_seg_expected_prev[5];
+	end
+	if (
+		( out_sec_shi_seg_expected_prev[6] !== 1'bx ) && ( out_sec_shi_seg_prev[6] !== out_sec_shi_seg_expected_prev[6] )
+		&& ((out_sec_shi_seg_expected_prev[6] !== last_out_sec_shi_seg_exp[6]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port out_sec_shi_seg[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", out_sec_shi_seg_expected_prev);
+		$display ("     Real value = %b", out_sec_shi_seg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_out_sec_shi_seg_exp[6] = out_sec_shi_seg_expected_prev[6];
 	end
 	if (
 		( sec_ge_r_expected_prev[0] !== 1'bx ) && ( sec_ge_r_prev[0] !== sec_ge_r_expected_prev[0] )
 		&& ((sec_ge_r_expected_prev[0] !== last_sec_ge_r_exp[0]) ||
-			on_first_change[13])
+			on_first_change[12])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_ge_r[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_ge_r_expected_prev);
 		$display ("     Real value = %b", sec_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[13] = 1'b0;
+		on_first_change[12] = 1'b0;
 		last_sec_ge_r_exp[0] = sec_ge_r_expected_prev[0];
 	end
 	if (
 		( sec_ge_r_expected_prev[1] !== 1'bx ) && ( sec_ge_r_prev[1] !== sec_ge_r_expected_prev[1] )
 		&& ((sec_ge_r_expected_prev[1] !== last_sec_ge_r_exp[1]) ||
-			on_first_change[13])
+			on_first_change[12])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_ge_r[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_ge_r_expected_prev);
 		$display ("     Real value = %b", sec_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[13] = 1'b0;
+		on_first_change[12] = 1'b0;
 		last_sec_ge_r_exp[1] = sec_ge_r_expected_prev[1];
 	end
 	if (
 		( sec_ge_r_expected_prev[2] !== 1'bx ) && ( sec_ge_r_prev[2] !== sec_ge_r_expected_prev[2] )
 		&& ((sec_ge_r_expected_prev[2] !== last_sec_ge_r_exp[2]) ||
-			on_first_change[13])
+			on_first_change[12])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_ge_r[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_ge_r_expected_prev);
 		$display ("     Real value = %b", sec_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[13] = 1'b0;
+		on_first_change[12] = 1'b0;
 		last_sec_ge_r_exp[2] = sec_ge_r_expected_prev[2];
 	end
 	if (
 		( sec_ge_r_expected_prev[3] !== 1'bx ) && ( sec_ge_r_prev[3] !== sec_ge_r_expected_prev[3] )
 		&& ((sec_ge_r_expected_prev[3] !== last_sec_ge_r_exp[3]) ||
-			on_first_change[13])
+			on_first_change[12])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_ge_r[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_ge_r_expected_prev);
 		$display ("     Real value = %b", sec_ge_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[13] = 1'b0;
+		on_first_change[12] = 1'b0;
 		last_sec_ge_r_exp[3] = sec_ge_r_expected_prev[3];
 	end
 	if (
 		( sec_shi_r_expected_prev[0] !== 1'bx ) && ( sec_shi_r_prev[0] !== sec_shi_r_expected_prev[0] )
 		&& ((sec_shi_r_expected_prev[0] !== last_sec_shi_r_exp[0]) ||
-			on_first_change[14])
+			on_first_change[13])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_shi_r[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_shi_r_expected_prev);
 		$display ("     Real value = %b", sec_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[14] = 1'b0;
+		on_first_change[13] = 1'b0;
 		last_sec_shi_r_exp[0] = sec_shi_r_expected_prev[0];
 	end
 	if (
 		( sec_shi_r_expected_prev[1] !== 1'bx ) && ( sec_shi_r_prev[1] !== sec_shi_r_expected_prev[1] )
 		&& ((sec_shi_r_expected_prev[1] !== last_sec_shi_r_exp[1]) ||
-			on_first_change[14])
+			on_first_change[13])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_shi_r[1] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_shi_r_expected_prev);
 		$display ("     Real value = %b", sec_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[14] = 1'b0;
+		on_first_change[13] = 1'b0;
 		last_sec_shi_r_exp[1] = sec_shi_r_expected_prev[1];
 	end
 	if (
 		( sec_shi_r_expected_prev[2] !== 1'bx ) && ( sec_shi_r_prev[2] !== sec_shi_r_expected_prev[2] )
 		&& ((sec_shi_r_expected_prev[2] !== last_sec_shi_r_exp[2]) ||
-			on_first_change[14])
+			on_first_change[13])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_shi_r[2] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_shi_r_expected_prev);
 		$display ("     Real value = %b", sec_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[14] = 1'b0;
+		on_first_change[13] = 1'b0;
 		last_sec_shi_r_exp[2] = sec_shi_r_expected_prev[2];
 	end
 	if (
 		( sec_shi_r_expected_prev[3] !== 1'bx ) && ( sec_shi_r_prev[3] !== sec_shi_r_expected_prev[3] )
 		&& ((sec_shi_r_expected_prev[3] !== last_sec_shi_r_exp[3]) ||
-			on_first_change[14])
+			on_first_change[13])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port sec_shi_r[3] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", sec_shi_r_expected_prev);
 		$display ("     Real value = %b", sec_shi_r_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[14] = 1'b0;
+		on_first_change[13] = 1'b0;
 		last_sec_shi_r_exp[3] = sec_shi_r_expected_prev[3];
 	end
 
@@ -845,7 +964,6 @@ reg [3:0] set_sec_shi;
 reg set_time_finish;
 // wires                                               
 wire clock_out;
-wire [7:0] data_out;
 wire [3:0] hour_ge_r;
 wire [3:0] hour_shi_r;
 wire [3:0] min_ge_r;
@@ -858,7 +976,6 @@ wire [6:0] out_sec_ge_seg;
 wire [6:0] out_sec_shi_seg;
 wire [3:0] sec_ge_r;
 wire [3:0] sec_shi_r;
-wire [7:0] select;
 
 wire sampler;                             
 
@@ -872,7 +989,6 @@ TOP i1 (
 	.clock_min_ge(clock_min_ge),
 	.clock_min_shi(clock_min_shi),
 	.clock_out(clock_out),
-	.data_out(data_out),
 	.hour_ge_r(hour_ge_r),
 	.hour_shi_r(hour_shi_r),
 	.min_ge_r(min_ge_r),
@@ -886,7 +1002,6 @@ TOP i1 (
 	.rst_n(rst_n),
 	.sec_ge_r(sec_ge_r),
 	.sec_shi_r(sec_shi_r),
-	.select(select),
 	.set_hour_ge(set_hour_ge),
 	.set_hour_shi(set_hour_shi),
 	.set_min_ge(set_min_ge),
@@ -921,9 +1036,9 @@ end
 // set_time_finish
 initial
 begin
-	set_time_finish = 1'b0;
-	set_time_finish = #520000 1'b1;
-	set_time_finish = #10000 1'b0;
+	set_time_finish = 1'b1;
+	set_time_finish = #520000 1'b0;
+	set_time_finish = #10000 1'b1;
 end 
 // clock_hour_shi[ 3 ]
 initial
@@ -1146,7 +1261,6 @@ TOP_vlg_sample_tst tb_sample (
 
 TOP_vlg_check_tst tb_out(
 	.clock_out(clock_out),
-	.data_out(data_out),
 	.hour_ge_r(hour_ge_r),
 	.hour_shi_r(hour_shi_r),
 	.min_ge_r(min_ge_r),
@@ -1159,7 +1273,6 @@ TOP_vlg_check_tst tb_out(
 	.out_sec_shi_seg(out_sec_shi_seg),
 	.sec_ge_r(sec_ge_r),
 	.sec_shi_r(sec_shi_r),
-	.select(select),
 	.sampler_rx(sampler)
 );
 endmodule

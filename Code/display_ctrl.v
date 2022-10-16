@@ -115,7 +115,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 assign out_sec_ge_seg = out_sec_ge;
-assign out_sec_shi_seg = out_sec_ge;
+assign out_sec_shi_seg = out_sec_shi;
 assign out_min_ge_seg = out_min_ge;
 assign out_min_shi_seg = out_min_shi;
 assign out_hour_ge_seg = out_hour_ge;

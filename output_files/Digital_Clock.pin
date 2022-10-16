@@ -64,263 +64,491 @@
  ---------------------------------------------------------------------------------
 
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-CHIP  "Digital_Clock"  ASSIGNED TO AN: EP4CE6F17A7
+CHIP  "Digital_Clock"  ASSIGNED TO AN: EP2C35F484C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-sec_ge_r[2]                  : A2        : output : 2.5 V             :         : 8         : N              
-out_sec_ge_seg[4]            : A3        : output : 2.5 V             :         : 8         : N              
-sec_ge_r[1]                  : A4        : output : 2.5 V             :         : 8         : N              
-set_sec_ge[1]                : A5        : input  : 2.5 V             :         : 8         : N              
-set_sec_shi[1]               : A6        : input  : 2.5 V             :         : 8         : N              
-out_hour_shi_seg[3]          : A7        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
-select[7]                    : A10       : output : 2.5 V             :         : 7         : N              
-set_hour_shi[2]              : A11       : input  : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
-data_out[5]                  : A13       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
-sec_shi_r[3]                 : A15       : output : 2.5 V             :         : 7         : N              
-VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
-out_sec_shi_seg[6]           : B1        : output : 2.5 V             :         : 1         : N              
+GND                          : A1        : gnd    :                   :         :           :                
+VCCIO3                       : A2        : power  :                   : 2.5V    : 3         :                
+out_hour_ge_seg[6]           : A3        : output : 2.5 V             :         : 3         : N              
+hour_ge_r[1]                 : A4        : output : 2.5 V             :         : 3         : N              
+hour_ge_r[2]                 : A5        : output : 2.5 V             :         : 3         : N              
+set_hour_ge[0]               : A6        : input  : 2.5 V             :         : 3         : N              
+out_hour_shi_seg[0]          : A7        : output : 2.5 V             :         : 3         : N              
+clock_hour_shi[0]            : A8        : input  : 2.5 V             :         : 3         : N              
+sec_shi_r[2]                 : A9        : output : 2.5 V             :         : 3         : N              
+sec_ge_r[3]                  : A10       : output : 2.5 V             :         : 3         : N              
+out_sec_shi_seg[1]           : A11       : output : 2.5 V             :         : 3         : N              
+GND+                         : A12       :        :                   :         : 4         :                
+sec_ge_r[0]                  : A13       : output : 2.5 V             :         : 4         : N              
+out_sec_ge_seg[1]            : A14       : output : 2.5 V             :         : 4         : N              
+out_sec_shi_seg[0]           : A15       : output : 2.5 V             :         : 4         : N              
+set_sec_shi[2]               : A16       : input  : 2.5 V             :         : 4         : N              
+set_sec_shi[1]               : A17       : input  : 2.5 V             :         : 4         : N              
+GND*                         : A18       :        :                   :         : 4         :                
+GND*                         : A19       :        :                   :         : 4         :                
+GND*                         : A20       :        :                   :         : 4         :                
+VCCIO4                       : A21       : power  :                   : 2.5V    : 4         :                
+GND                          : A22       : gnd    :                   :         :           :                
+VCCIO1                       : AA1       : power  :                   : 2.5V    : 1         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+GND*                         : AA3       :        :                   :         : 8         :                
+GND*                         : AA4       :        :                   :         : 8         :                
+GND*                         : AA5       :        :                   :         : 8         :                
+GND*                         : AA6       :        :                   :         : 8         :                
+GND*                         : AA7       :        :                   :         : 8         :                
+GND*                         : AA8       :        :                   :         : 8         :                
+GND*                         : AA9       :        :                   :         : 8         :                
+GND*                         : AA10      :        :                   :         : 8         :                
+GND*                         : AA11      :        :                   :         : 8         :                
+GND*                         : AA12      :        :                   :         : 7         :                
+GND*                         : AA13      :        :                   :         : 7         :                
+GND*                         : AA14      :        :                   :         : 7         :                
+GND*                         : AA15      :        :                   :         : 7         :                
+GND*                         : AA16      :        :                   :         : 7         :                
+GND*                         : AA17      :        :                   :         : 7         :                
+GND*                         : AA18      :        :                   :         : 7         :                
+GND*                         : AA19      :        :                   :         : 7         :                
+GND*                         : AA20      :        :                   :         : 7         :                
+GND                          : AA21      : gnd    :                   :         :           :                
+VCCIO6                       : AA22      : power  :                   : 2.5V    : 6         :                
+GND                          : AB1       : gnd    :                   :         :           :                
+VCCIO8                       : AB2       : power  :                   : 2.5V    : 8         :                
+GND*                         : AB3       :        :                   :         : 8         :                
+GND*                         : AB4       :        :                   :         : 8         :                
+GND*                         : AB5       :        :                   :         : 8         :                
+GND*                         : AB6       :        :                   :         : 8         :                
+GND*                         : AB7       :        :                   :         : 8         :                
+GND*                         : AB8       :        :                   :         : 8         :                
+GND*                         : AB9       :        :                   :         : 8         :                
+hour_shi_r[3]                : AB10      : output : 2.5 V             :         : 8         : N              
+GND*                         : AB11      :        :                   :         : 8         :                
+set_hour_shi[2]              : AB12      : input  : 2.5 V             :         : 7         : N              
+GND*                         : AB13      :        :                   :         : 7         :                
+GND*                         : AB14      :        :                   :         : 7         :                
+set_sec_shi[3]               : AB15      : input  : 2.5 V             :         : 7         : N              
+GND*                         : AB16      :        :                   :         : 7         :                
+GND*                         : AB17      :        :                   :         : 7         :                
+GND*                         : AB18      :        :                   :         : 7         :                
+GND*                         : AB19      :        :                   :         : 7         :                
+GND*                         : AB20      :        :                   :         : 7         :                
+VCCIO7                       : AB21      : power  :                   : 2.5V    : 7         :                
+GND                          : AB22      : gnd    :                   :         :           :                
+VCCIO2                       : B1        : power  :                   : 2.5V    : 2         :                
 GND                          : B2        : gnd    :                   :         :           :                
-out_sec_shi_seg[3]           : B3        : output : 2.5 V             :         : 8         : N              
-sec_ge_r[3]                  : B4        : output : 2.5 V             :         : 8         : N              
-set_sec_ge[2]                : B5        : input  : 2.5 V             :         : 8         : N              
-set_hour_ge[2]               : B6        : input  : 2.5 V             :         : 8         : N              
-out_sec_ge_seg[1]            : B7        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 7         :                
-select[2]                    : B10       : output : 2.5 V             :         : 7         : N              
-set_sec_shi[3]               : B11       : input  : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
-select[5]                    : B13       : output : 2.5 V             :         : 7         : N              
-out_hour_shi_seg[1]          : B14       : output : 2.5 V             :         : 7         : N              
-GND                          : B15       : gnd    :                   :         :           :                
-data_out[6]                  : B16       : output : 2.5 V             :         : 6         : N              
-~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
-out_sec_ge_seg[6]            : C2        : output : 2.5 V             :         : 1         : N              
-out_sec_shi_seg[4]           : C3        : output : 2.5 V             :         : 8         : N              
-VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
+min_shi_r[0]                 : B3        : output : 2.5 V             :         : 3         : N              
+out_hour_ge_seg[5]           : B4        : output : 2.5 V             :         : 3         : N              
+clock_hour_ge[2]             : B5        : input  : 2.5 V             :         : 3         : N              
+clock_hour_ge[1]             : B6        : input  : 2.5 V             :         : 3         : N              
+out_hour_shi_seg[3]          : B7        : output : 2.5 V             :         : 3         : N              
+set_hour_shi[0]              : B8        : input  : 2.5 V             :         : 3         : N              
+out_hour_shi_seg[5]          : B9        : output : 2.5 V             :         : 3         : N              
+out_sec_ge_seg[4]            : B10       : output : 2.5 V             :         : 3         : N              
+set_sec_ge[2]                : B11       : input  : 2.5 V             :         : 3         : N              
+GND+                         : B12       :        :                   :         : 4         :                
+out_sec_shi_seg[5]           : B13       : output : 2.5 V             :         : 4         : N              
+out_sec_ge_seg[2]            : B14       : output : 2.5 V             :         : 4         : N              
+out_sec_shi_seg[6]           : B15       : output : 2.5 V             :         : 4         : N              
+set_sec_shi[0]               : B16       : input  : 2.5 V             :         : 4         : N              
+out_sec_shi_seg[4]           : B17       : output : 2.5 V             :         : 4         : N              
+GND*                         : B18       :        :                   :         : 4         :                
+GND*                         : B19       :        :                   :         : 4         :                
+GND*                         : B20       :        :                   :         : 4         :                
+GND                          : B21       : gnd    :                   :         :           :                
+VCCIO5                       : B22       : power  :                   : 2.5V    : 5         :                
+out_min_shi_seg[5]           : C1        : output : 2.5 V             :         : 2         : N              
+clock_min_shi[3]             : C2        : input  : 2.5 V             :         : 2         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 2.5 V             :         : 2         : N              
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C4        : input  : 2.5 V             :         : 2         : N              
 GND                          : C5        : gnd    :                   :         :           :                
-set_sec_shi[2]               : C6        : input  : 2.5 V             :         : 8         : N              
-VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-clock_hour_ge[1]             : C8        : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
-VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
-GND                          : C12       : gnd    :                   :         :           :                
-VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
-out_sec_ge_seg[0]            : D1        : output : 2.5 V             :         : 1         : N              
-~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
-out_sec_ge_seg[3]            : D3        : output : 2.5 V             :         : 8         : N              
-out_sec_shi_seg[2]           : D4        : output : 2.5 V             :         : 1         : N              
-out_sec_shi_seg[5]           : D5        : output : 2.5 V             :         : 8         : N              
-out_sec_ge_seg[5]            : D6        : output : 2.5 V             :         : 8         : N              
-GND                          : D7        : gnd    :                   :         :           :                
-set_sec_ge[0]                : D8        : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 7         :                
+VCCIO3                       : C6        : power  :                   : 2.5V    : 3         :                
+out_hour_shi_seg[6]          : C7        : output : 2.5 V             :         : 3         : N              
+GND                          : C8        : gnd    :                   :         :           :                
+clock_hour_ge[3]             : C9        : input  : 2.5 V             :         : 3         : N              
+sec_shi_r[1]                 : C10       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : C11       : power  :                   : 2.5V    : 3         :                
+VCCIO4                       : C12       : power  :                   : 2.5V    : 4         :                
+set_sec_ge[0]                : C13       : input  : 2.5 V             :         : 4         : N              
+GND*                         : C14       :        :                   :         : 4         :                
+GND                          : C15       : gnd    :                   :         :           :                
+GND*                         : C16       :        :                   :         : 4         :                
+GND*                         : C17       :        :                   :         : 4         :                
+GND*                         : C18       :        :                   :         : 4         :                
+GND*                         : C19       :        :                   :         : 5         :                
+GND*                         : C20       :        :                   :         : 5         :                
+GND*                         : C21       :        :                   :         : 5         :                
+GND*                         : C22       :        :                   :         : 5         :                
+min_ge_r[0]                  : D1        : output : 2.5 V             :         : 2         : N              
+min_ge_r[3]                  : D2        : output : 2.5 V             :         : 2         : N              
+min_shi_r[2]                 : D3        : output : 2.5 V             :         : 2         : N              
+hour_ge_r[0]                 : D4        : output : 2.5 V             :         : 2         : N              
+min_shi_r[1]                 : D5        : output : 2.5 V             :         : 2         : N              
+set_min_shi[0]               : D6        : input  : 2.5 V             :         : 2         : N              
+set_hour_shi[1]              : D7        : input  : 2.5 V             :         : 3         : N              
+clock_hour_ge[0]             : D8        : input  : 2.5 V             :         : 3         : N              
+clock_hour_shi[2]            : D9        : input  : 2.5 V             :         : 3         : N              
 GND                          : D10       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
-VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
-data_out[4]                  : D15       : output : 2.5 V             :         : 6         : N              
-hour_shi_r[2]                : D16       : output : 2.5 V             :         : 6         : N              
-clk                          : E1        : input  : 2.5 V             :         : 1         : N              
-GND                          : E2        : gnd    :                   :         :           :                
-VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
-GND                          : E4        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 1         :                
-set_sec_ge[3]                : E6        : input  : 2.5 V             :         : 8         : N              
-clock_min_shi[2]             : E7        : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-select[3]                    : E9        : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 7         :                
-GNDA2                        : E12       : gnd    :                   :         :           :                
-GND                          : E13       : gnd    :                   :         :           :                
-VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
-GND+                         : E15       :        :                   :         : 6         :                
-GND+                         : E16       :        :                   :         : 6         :                
-sec_ge_r[0]                  : F1        : output : 2.5 V             :         : 1         : N              
-sec_shi_r[1]                 : F2        : output : 2.5 V             :         : 1         : N              
-out_sec_shi_seg[0]           : F3        : output : 2.5 V             :         : 1         : N              
-nSTATUS                      : F4        :        :                   :         : 1         :                
-out_sec_ge_seg[2]            : F5        : output : 2.5 V             :         : 1         : N              
-out_sec_shi_seg[1]           : F6        : output : 2.5 V             :         : 8         : N              
-sec_shi_r[2]                 : F7        : output : 2.5 V             :         : 8         : N              
-out_min_shi_seg[0]           : F8        : output : 2.5 V             :         : 8         : N              
-min_shi_r[3]                 : F9        : output : 2.5 V             :         : 7         : N              
-data_out[0]                  : F10       : output : 2.5 V             :         : 7         : N              
-data_out[1]                  : F11       : output : 2.5 V             :         : 7         : N              
-VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
-~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
-set_time_finish              : G1        : input  : 2.5 V             :         : 1         : N              
-sec_shi_r[0]                 : G2        : output : 2.5 V             :         : 1         : N              
-VCCIO1                       : G3        : power  :                   : 2.5V    : 1         :                
+sec_ge_r[2]                  : D11       : output : 2.5 V             :         : 3         : N              
+GND+                         : D12       :        :                   :         : 3         :                
+GND                          : D13       : gnd    :                   :         :           :                
+set_sec_ge[1]                : D14       : input  : 2.5 V             :         : 4         : N              
+GND*                         : D15       :        :                   :         : 4         :                
+GND*                         : D16       :        :                   :         : 4         :                
+VCCIO4                       : D17       : power  :                   : 2.5V    : 4         :                
+GND                          : D18       : gnd    :                   :         :           :                
+GND*                         : D19       :        :                   :         : 5         :                
+GND*                         : D20       :        :                   :         : 5         :                
+GND*                         : D21       :        :                   :         : 5         :                
+GND*                         : D22       :        :                   :         : 5         :                
+clock_min_ge[3]              : E1        : input  : 2.5 V             :         : 2         : N              
+out_hour_ge_seg[1]           : E2        : output : 2.5 V             :         : 2         : N              
+hour_ge_r[3]                 : E3        : output : 2.5 V             :         : 2         : N              
+clock_min_ge[2]              : E4        : input  : 2.5 V             :         : 2         : N              
+VCCD_PLL3                    : E5        : power  :                   : 1.2V    :           :                
+VCCA_PLL3                    : E6        : power  :                   : 1.2V    :           :                
+set_hour_ge[1]               : E7        : input  : 2.5 V             :         : 3         : N              
+clock_hour_shi[1]            : E8        : input  : 2.5 V             :         : 3         : N              
+clock_hour_shi[3]            : E9        : input  : 2.5 V             :         : 3         : N              
+VCCIO3                       : E10       : power  :                   : 2.5V    : 3         :                
+out_sec_ge_seg[0]            : E11       : output : 2.5 V             :         : 3         : N              
+GND+                         : E12       :        :                   :         : 3         :                
+VCCIO4                       : E13       : power  :                   : 2.5V    : 4         :                
+set_sec_ge[3]                : E14       : input  : 2.5 V             :         : 4         : N              
+GND*                         : E15       :        :                   :         : 4         :                
+GNDA_PLL2                    : E16       : gnd    :                   :         :           :                
+GND_PLL2                     : E17       : gnd    :                   :         :           :                
+GND*                         : E18       :        :                   :         : 5         :                
+GND*                         : E19       :        :                   :         : 5         :                
+GND*                         : E20       :        :                   :         : 5         :                
+GND*                         : E21       :        :                   :         : 5         :                
+sec_shi_r[3]                 : E22       : output : 2.5 V             :         : 5         : N              
+out_min_shi_seg[4]           : F1        : output : 2.5 V             :         : 2         : N              
+out_hour_ge_seg[2]           : F2        : output : 2.5 V             :         : 2         : N              
+out_min_shi_seg[6]           : F3        : output : 2.5 V             :         : 2         : N              
+clock_min_ge[0]              : F4        : input  : 2.5 V             :         : 2         : N              
+GND_PLL3                     : F5        : gnd    :                   :         :           :                
+GND_PLL3                     : F6        : gnd    :                   :         :           :                
+GNDA_PLL3                    : F7        : gnd    :                   :         :           :                
+out_hour_shi_seg[2]          : F8        : output : 2.5 V             :         : 3         : N              
+set_hour_ge[3]               : F9        : input  : 2.5 V             :         : 3         : N              
+set_time_finish              : F10       : input  : 2.5 V             :         : 3         : N              
+sec_shi_r[0]                 : F11       : output : 2.5 V             :         : 3         : N              
+out_sec_shi_seg[2]           : F12       : output : 2.5 V             :         : 4         : N              
+sec_ge_r[1]                  : F13       : output : 2.5 V             :         : 4         : N              
+out_sec_shi_seg[3]           : F14       : output : 2.5 V             :         : 4         : N              
+out_sec_ge_seg[5]            : F15       : output : 2.5 V             :         : 4         : N              
+VCCA_PLL2                    : F16       : power  :                   : 1.2V    :           :                
+VCCD_PLL2                    : F17       : power  :                   : 1.2V    :           :                
+GND_PLL2                     : F18       : gnd    :                   :         :           :                
+GND                          : F19       : gnd    :                   :         :           :                
+GND*                         : F20       :        :                   :         : 5         :                
+GND*                         : F21       :        :                   :         : 5         :                
+GND*                         : F22       :        :                   :         : 5         :                
+set_min_ge[0]                : G1        : input  : 2.5 V             :         : 2         : N              
+min_ge_r[2]                  : G2        : output : 2.5 V             :         : 2         : N              
+out_hour_ge_seg[0]           : G3        : output : 2.5 V             :         : 2         : N              
 GND                          : G4        : gnd    :                   :         :           :                
-select[4]                    : G5        : output : 2.5 V             :         : 1         : N              
-VCCINT                       : G6        : power  :                   : 1.2V    :           :                
-VCCINT                       : G7        : power  :                   : 1.2V    :           :                
+clock_out                    : G5        : output : 2.5 V             :         : 2         : N              
+out_min_shi_seg[2]           : G6        : output : 2.5 V             :         : 2         : N              
+hour_shi_r[1]                : G7        : output : 2.5 V             :         : 3         : N              
 VCCINT                       : G8        : power  :                   : 1.2V    :           :                
-VCCINT                       : G9        : power  :                   : 1.2V    :           :                
-VCCINT                       : G10       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 6         :                
-MSEL2                        : G12       :        :                   :         : 6         :                
+VCCIO3                       : G9        : power  :                   : 2.5V    : 3         :                
+GND                          : G10       : gnd    :                   :         :           :                
+out_sec_ge_seg[6]            : G11       : output : 2.5 V             :         : 3         : N              
+VCCINT                       : G12       : power  :                   : 1.2V    :           :                
 GND                          : G13       : gnd    :                   :         :           :                
-VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
-select[1]                    : G15       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 6         :                
-~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
-~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
-TCK                          : H3        : input  :                   :         : 1         :                
-TDI                          : H4        : input  :                   :         : 1         :                
-nCONFIG                      : H5        :        :                   :         : 1         :                
-VCCINT                       : H6        : power  :                   : 1.2V    :           :                
-GND                          : H7        : gnd    :                   :         :           :                
-GND                          : H8        : gnd    :                   :         :           :                
+VCCIO4                       : G14       : power  :                   : 2.5V    : 4         :                
+GND                          : G15       : gnd    :                   :         :           :                
+GND*                         : G16       :        :                   :         : 4         :                
+GND*                         : G17       :        :                   :         : 5         :                
+GND*                         : G18       :        :                   :         : 5         :                
+VCCIO5                       : G19       : power  :                   : 2.5V    : 5         :                
+GND*                         : G20       :        :                   :         : 5         :                
+GND*                         : G21       :        :                   :         : 5         :                
+GND*                         : G22       :        :                   :         : 5         :                
+out_min_ge_seg[3]            : H1        : output : 2.5 V             :         : 2         : N              
+set_min_ge[3]                : H2        : input  : 2.5 V             :         : 2         : N              
+min_ge_r[1]                  : H3        : output : 2.5 V             :         : 2         : N              
+out_min_shi_seg[1]           : H4        : output : 2.5 V             :         : 2         : N              
+out_min_shi_seg[3]           : H5        : output : 2.5 V             :         : 2         : N              
+clock_min_shi[2]             : H6        : input  : 2.5 V             :         : 2         : N              
+hour_shi_r[0]                : H7        : output : 2.5 V             :         : 3         : N              
+VCCINT                       : H8        : power  :                   : 1.2V    :           :                
 GND                          : H9        : gnd    :                   :         :           :                
 GND                          : H10       : gnd    :                   :         :           :                
-VCCINT                       : H11       : power  :                   : 1.2V    :           :                
-MSEL1                        : H12       :        :                   :         : 6         :                
-MSEL0                        : H13       :        :                   :         : 6         :                
-CONF_DONE                    : H14       :        :                   :         : 6         :                
-GND                          : H15       : gnd    :                   :         :           :                
-GND                          : H16       : gnd    :                   :         :           :                
-out_min_shi_seg[5]           : J1        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J2        :        :                   :         : 2         :                
-nCE                          : J3        :        :                   :         : 1         :                
-TDO                          : J4        : output :                   :         : 1         :                
-TMS                          : J5        : input  :                   :         : 1         :                
-clock_min_ge[2]              : J6        : input  : 2.5 V             :         : 2         : N              
-GND                          : J7        : gnd    :                   :         :           :                
+out_sec_ge_seg[3]            : H11       : output : 2.5 V             :         : 3         : N              
+VCCINT                       : H12       : power  :                   : 1.2V    :           :                
+VCCINT                       : H13       : power  :                   : 1.2V    :           :                
+GND*                         : H14       :        :                   :         : 4         :                
+GND*                         : H15       :        :                   :         : 4         :                
+GND*                         : H16       :        :                   :         : 5         :                
+GND*                         : H17       :        :                   :         : 5         :                
+GND*                         : H18       :        :                   :         : 5         :                
+GND*                         : H19       :        :                   :         : 5         :                
+GND                          : H20       : gnd    :                   :         :           :                
+GND*                         : H21       :        :                   :         : 5         :                
+out_hour_shi_seg[1]          : H22       : output : 2.5 V             :         : 5         : N              
+out_min_ge_seg[4]            : J1        : output : 2.5 V             :         : 2         : N              
+set_min_ge[1]                : J2        : input  : 2.5 V             :         : 2         : N              
+out_min_ge_seg[2]            : J3        : output : 2.5 V             :         : 2         : N              
+out_min_ge_seg[1]            : J4        : output : 2.5 V             :         : 2         : N              
+out_min_ge_seg[5]            : J5        : output : 2.5 V             :         : 2         : N              
+set_min_ge[2]                : J6        : input  : 2.5 V             :         : 2         : N              
+VCCIO2                       : J7        : power  :                   : 2.5V    : 2         :                
 GND                          : J8        : gnd    :                   :         :           :                
 GND                          : J9        : gnd    :                   :         :           :                
-GND                          : J10       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J12       :        :                   :         : 5         :                
-hour_shi_r[3]                : J13       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 5         :                
-out_min_ge_seg[5]            : K1        : output : 2.5 V             :         : 2         : N              
-out_min_ge_seg[2]            : K2        : output : 2.5 V             :         : 2         : N              
-VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
-GND                          : K4        : gnd    :                   :         :           :                
-set_min_shi[0]               : K5        : input  : 2.5 V             :         : 2         : N              
-out_min_shi_seg[2]           : K6        : output : 2.5 V             :         : 2         : N              
-VCCINT                       : K7        : power  :                   : 1.2V    :           :                
-min_shi_r[2]                 : K8        : output : 2.5 V             :         : 3         : N              
-out_hour_ge_seg[4]           : K9        : output : 2.5 V             :         : 4         : N              
-out_hour_ge_seg[1]           : K10       : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : K11       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K12       :        :                   :         : 5         :                
+VCCINT                       : J10       : power  :                   : 1.2V    :           :                
+VCCINT                       : J11       : power  :                   : 1.2V    :           :                
+VCCINT                       : J12       : power  :                   : 1.2V    :           :                
+VCCINT                       : J13       : power  :                   : 1.2V    :           :                
+GND*                         : J14       :        :                   :         : 4         :                
+GND*                         : J15       :        :                   :         : 5         :                
+VCCIO5                       : J16       : power  :                   : 2.5V    : 5         :                
+GND*                         : J17       :        :                   :         : 5         :                
+GND*                         : J18       :        :                   :         : 5         :                
+GND*                         : J19       :        :                   :         : 5         :                
+GND*                         : J20       :        :                   :         : 5         :                
+GND*                         : J21       :        :                   :         : 5         :                
+GND*                         : J22       :        :                   :         : 5         :                
+nCE                          : K1        :        :                   :         : 2         :                
+TCK                          : K2        : input  :                   :         : 2         :                
+GND                          : K3        : gnd    :                   :         :           :                
+DATA0                        : K4        : input  :                   :         : 2         :                
+TDI                          : K5        : input  :                   :         : 2         :                
+TMS                          : K6        : input  :                   :         : 2         :                
+GND                          : K7        : gnd    :                   :         :           :                
+VCCINT                       : K8        : power  :                   : 1.2V    :           :                
+VCCINT                       : K9        : power  :                   : 1.2V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+GND                          : K12       : gnd    :                   :         :           :                
 GND                          : K13       : gnd    :                   :         :           :                
-VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
-set_hour_shi[3]              : K15       : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 5         :                
-clock_min_shi[1]             : L1        : input  : 2.5 V             :         : 2         : N              
-out_min_ge_seg[0]            : L2        : output : 2.5 V             :         : 2         : N              
-set_min_ge[0]                : L3        : input  : 2.5 V             :         : 2         : N              
-clock_min_shi[3]             : L4        : input  : 2.5 V             :         : 2         : N              
-VCCA1                        : L5        : power  :                   : 2.5V    :           :                
-out_min_shi_seg[1]           : L6        : output : 2.5 V             :         : 2         : N              
-clock_min_ge[1]              : L7        : input  : 2.5 V             :         : 3         : N              
-set_hour_shi[0]              : L8        : input  : 2.5 V             :         : 3         : N              
-hour_ge_r[0]                 : L9        : output : 2.5 V             :         : 4         : N              
-out_hour_ge_seg[6]           : L10       : output : 2.5 V             :         : 4         : N              
-set_min_shi[3]               : L11       : input  : 2.5 V             :         : 4         : N              
-select[6]                    : L12       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : L13       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L16       :        :                   :         : 5         :                
-set_sec_shi[0]               : M1        : input  : 2.5 V             :         : 2         : N              
-rst_n                        : M2        : input  : 2.5 V             :         : 2         : N              
-VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
+VCCINT                       : K14       : power  :                   : 1.2V    :           :                
+GND                          : K15       : gnd    :                   :         :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+GND*                         : K17       :        :                   :         : 5         :                
+GND*                         : K18       :        :                   :         : 5         :                
+GND                          : K19       : gnd    :                   :         :           :                
+GND*                         : K20       :        :                   :         : 5         :                
+GND*                         : K21       :        :                   :         : 5         :                
+min_shi_r[3]                 : K22       : output : 2.5 V             :         : 5         : N              
+GND+                         : L1        :        :                   :         : 2         :                
+GND+                         : L2        :        :                   :         : 2         :                
+VCCIO2                       : L3        : power  :                   : 2.5V    : 2         :                
+nCONFIG                      : L4        :        :                   :         : 2         :                
+TDO                          : L5        : output :                   :         : 2         :                
+DCLK                         : L6        :        :                   :         : 2         :                
+out_min_ge_seg[0]            : L7        : output : 2.5 V             :         : 2         : N              
+out_min_ge_seg[6]            : L8        : output : 2.5 V             :         : 2         : N              
+VCCINT                       : L9        : power  :                   : 1.2V    :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+GND                          : L12       : gnd    :                   :         :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCCINT                       : L14       : power  :                   : 1.2V    :           :                
+GND                          : L15       : gnd    :                   :         :           :                
+VCCINT                       : L16       : power  :                   : 1.2V    :           :                
+GND*                         : L17       :        :                   :         : 5         :                
+GND*                         : L18       :        :                   :         : 5         :                
+GND*                         : L19       :        :                   :         : 5         :                
+VCCIO5                       : L20       : power  :                   : 2.5V    : 5         :                
+GND+                         : L21       :        :                   :         : 5         :                
+GND+                         : L22       :        :                   :         : 5         :                
+clk                          : M1        : input  : 2.5 V             :         : 1         : N              
+rst_n                        : M2        : input  : 2.5 V             :         : 1         : N              
+VCCIO1                       : M3        : power  :                   : 2.5V    : 1         :                
 GND                          : M4        : gnd    :                   :         :           :                
-GNDA1                        : M5        : gnd    :                   :         :           :                
-min_shi_r[0]                 : M6        : output : 2.5 V             :         : 3         : N              
-set_hour_ge[0]               : M7        : input  : 2.5 V             :         : 3         : N              
-hour_ge_r[2]                 : M8        : output : 2.5 V             :         : 3         : N              
-out_hour_ge_seg[2]           : M9        : output : 2.5 V             :         : 4         : N              
-out_hour_ge_seg[5]           : M10       : output : 2.5 V             :         : 4         : N              
-data_out[3]                  : M11       : output : 2.5 V             :         : 4         : N              
-data_out[7]                  : M12       : output : 2.5 V             :         : 5         : N              
+clock_min_shi[0]             : M5        : input  : 2.5 V             :         : 1         : N              
+clock_min_shi[1]             : M6        : input  : 2.5 V             :         : 1         : N              
+out_hour_ge_seg[4]           : M7        : output : 2.5 V             :         : 1         : N              
+clock_en                     : M8        : input  : 2.5 V             :         : 1         : N              
+VCCINT                       : M9        : power  :                   : 1.2V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+GND                          : M11       : gnd    :                   :         :           :                
+GND                          : M12       : gnd    :                   :         :           :                
 GND                          : M13       : gnd    :                   :         :           :                
-VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
-GND+                         : M15       :        :                   :         : 5         :                
-GND+                         : M16       :        :                   :         : 5         :                
-out_min_ge_seg[1]            : N1        : output : 2.5 V             :         : 2         : N              
-set_min_ge[2]                : N2        : input  : 2.5 V             :         : 2         : N              
-min_shi_r[1]                 : N3        : output : 2.5 V             :         : 3         : N              
-VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
-out_min_ge_seg[4]            : N5        : output : 2.5 V             :         : 3         : N              
-min_ge_r[1]                  : N6        : output : 2.5 V             :         : 3         : N              
+VCCINT                       : M14       : power  :                   : 1.2V    :           :                
+GND*                         : M15       :        :                   :         : 6         :                
+GND*                         : M16       :        :                   :         : 6         :                
+MSEL0                        : M17       :        :                   :         : 6         :                
+GND*                         : M18       :        :                   :         : 6         :                
+GND*                         : M19       :        :                   :         : 6         :                
+VCCIO6                       : M20       : power  :                   : 2.5V    : 6         :                
+GND+                         : M21       :        :                   :         : 6         :                
+GND+                         : M22       :        :                   :         : 6         :                
+out_hour_shi_seg[4]          : N1        : output : 2.5 V             :         : 1         : N              
+set_hour_ge[2]               : N2        : input  : 2.5 V             :         : 1         : N              
+GND*                         : N3        :        :                   :         : 1         :                
+clock_min_ge[1]              : N4        : input  : 2.5 V             :         : 1         : N              
+set_min_shi[1]               : N5        : input  : 2.5 V             :         : 1         : N              
+set_min_shi[2]               : N6        : input  : 2.5 V             :         : 1         : N              
 GND                          : N7        : gnd    :                   :         :           :                
-hour_ge_r[1]                 : N8        : output : 2.5 V             :         : 3         : N              
-out_hour_ge_seg[0]           : N9        : output : 2.5 V             :         : 4         : N              
+GND                          : N8        : gnd    :                   :         :           :                
+VCCINT                       : N9        : power  :                   : 1.2V    :           :                
 GND                          : N10       : gnd    :                   :         :           :                
-set_min_ge[3]                : N11       : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 4         :                
-clock_hour_ge[3]             : N13       : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N16       :        :                   :         : 5         :                
-out_min_shi_seg[3]           : P1        : output : 2.5 V             :         : 2         : N              
-out_min_shi_seg[6]           : P2        : output : 2.5 V             :         : 2         : N              
-out_min_shi_seg[4]           : P3        : output : 2.5 V             :         : 3         : N              
-VCCIO3                       : P4        : power  :                   : 2.5V    : 3         :                
-GND                          : P5        : gnd    :                   :         :           :                
-min_ge_r[2]                  : P6        : output : 2.5 V             :         : 3         : N              
-VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
-out_hour_shi_seg[4]          : P8        : output : 2.5 V             :         : 3         : N              
-clock_hour_shi[0]            : P9        : input  : 2.5 V             :         : 4         : N              
-VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
-out_hour_shi_seg[2]          : P11       : output : 2.5 V             :         : 4         : N              
-GND                          : P12       : gnd    :                   :         :           :                
-VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
-data_out[2]                  : P14       : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
-select[0]                    : P16       : output : 2.5 V             :         : 5         : N              
-clock_min_ge[3]              : R1        : input  : 2.5 V             :         : 2         : N              
-GND                          : R2        : gnd    :                   :         :           :                
-min_ge_r[0]                  : R3        : output : 2.5 V             :         : 3         : N              
-clock_min_ge[0]              : R4        : input  : 2.5 V             :         : 3         : N              
-set_min_ge[1]                : R5        : input  : 2.5 V             :         : 3         : N              
-set_hour_ge[1]               : R6        : input  : 2.5 V             :         : 3         : N              
-set_min_shi[1]               : R7        : input  : 2.5 V             :         : 3         : N              
-set_min_shi[2]               : R8        : input  : 2.5 V             :         : 3         : N              
-hour_shi_r[1]                : R9        : output : 2.5 V             :         : 4         : N              
-clock_hour_shi[2]            : R10       : input  : 2.5 V             :         : 4         : N              
-clock_hour_ge[0]             : R11       : input  : 2.5 V             :         : 4         : N              
-clock_out                    : R12       : output : 2.5 V             :         : 4         : N              
-out_hour_shi_seg[5]          : R13       : output : 2.5 V             :         : 4         : N              
-clock_hour_ge[2]             : R14       : input  : 2.5 V             :         : 4         : N              
-GND                          : R15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5         :                
-VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
-out_min_ge_seg[3]            : T2        : output : 2.5 V             :         : 3         : N              
-out_min_ge_seg[6]            : T3        : output : 2.5 V             :         : 3         : N              
-min_ge_r[3]                  : T4        : output : 2.5 V             :         : 3         : N              
-set_hour_ge[3]               : T5        : input  : 2.5 V             :         : 3         : N              
-set_hour_shi[1]              : T6        : input  : 2.5 V             :         : 3         : N              
-hour_ge_r[3]                 : T7        : output : 2.5 V             :         : 3         : N              
-out_hour_shi_seg[0]          : T8        : output : 2.5 V             :         : 3         : N              
-hour_shi_r[0]                : T9        : output : 2.5 V             :         : 4         : N              
-clock_hour_shi[1]            : T10       : input  : 2.5 V             :         : 4         : N              
-out_hour_shi_seg[6]          : T11       : output : 2.5 V             :         : 4         : N              
-out_hour_ge_seg[3]           : T12       : output : 2.5 V             :         : 4         : N              
-clock_en                     : T13       : input  : 2.5 V             :         : 4         : N              
-clock_hour_shi[3]            : T14       : input  : 2.5 V             :         : 4         : N              
-clock_min_shi[0]             : T15       : input  : 2.5 V             :         : 4         : N              
-VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                
+GND                          : N11       : gnd    :                   :         :           :                
+GND                          : N12       : gnd    :                   :         :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCCINT                       : N14       : power  :                   : 1.2V    :           :                
+GND*                         : N15       :        :                   :         : 6         :                
+GND                          : N16       : gnd    :                   :         :           :                
+MSEL1                        : N17       :        :                   :         : 6         :                
+CONF_DONE                    : N18       :        :                   :         : 6         :                
+GND                          : N19       : gnd    :                   :         :           :                
+nSTATUS                      : N20       :        :                   :         : 6         :                
+GND*                         : N21       :        :                   :         : 6         :                
+GND*                         : N22       :        :                   :         : 6         :                
+out_hour_ge_seg[3]           : P1        : output : 2.5 V             :         : 1         : N              
+out_min_shi_seg[0]           : P2        : output : 2.5 V             :         : 1         : N              
+GND*                         : P3        :        :                   :         : 1         :                
+GND*                         : P4        :        :                   :         : 1         :                
+GND*                         : P5        :        :                   :         : 1         :                
+GND*                         : P6        :        :                   :         : 1         :                
+VCCIO1                       : P7        : power  :                   : 2.5V    : 1         :                
+GND                          : P8        : gnd    :                   :         :           :                
+GND                          : P9        : gnd    :                   :         :           :                
+VCCINT                       : P10       : power  :                   : 1.2V    :           :                
+VCCINT                       : P11       : power  :                   : 1.2V    :           :                
+VCCINT                       : P12       : power  :                   : 1.2V    :           :                
+VCCINT                       : P13       : power  :                   : 1.2V    :           :                
+VCCINT                       : P14       : power  :                   : 1.2V    :           :                
+GND*                         : P15       :        :                   :         : 6         :                
+VCCIO6                       : P16       : power  :                   : 2.5V    : 6         :                
+GND*                         : P17       :        :                   :         : 6         :                
+GND*                         : P18       :        :                   :         : 6         :                
+GND*                         : P19       :        :                   :         : 6         :                
+GND*                         : P20       :        :                   :         : 6         :                
+GND*                         : P21       :        :                   :         : 6         :                
+GND*                         : P22       :        :                   :         : 6         :                
+GND*                         : R1        :        :                   :         : 1         :                
+GND*                         : R2        :        :                   :         : 1         :                
+GND                          : R3        : gnd    :                   :         :           :                
+GND*                         : R4        :        :                   :         : 1         :                
+GND*                         : R5        :        :                   :         : 1         :                
+GND*                         : R6        :        :                   :         : 1         :                
+GND*                         : R7        :        :                   :         : 1         :                
+GND*                         : R8        :        :                   :         : 1         :                
+GND                          : R9        : gnd    :                   :         :           :                
+VCCINT                       : R10       : power  :                   : 1.2V    :           :                
+GND*                         : R11       :        :                   :         : 8         :                
+VCCINT                       : R12       : power  :                   : 1.2V    :           :                
+GND                          : R13       : gnd    :                   :         :           :                
+GND*                         : R14       :        :                   :         : 7         :                
+GND*                         : R15       :        :                   :         : 7         :                
+GND*                         : R16       :        :                   :         : 7         :                
+GND*                         : R17       :        :                   :         : 6         :                
+GND*                         : R18       :        :                   :         : 6         :                
+GND*                         : R19       :        :                   :         : 6         :                
+GND*                         : R20       :        :                   :         : 6         :                
+GND*                         : R21       :        :                   :         : 6         :                
+GND*                         : R22       :        :                   :         : 6         :                
+GND*                         : T1        :        :                   :         : 1         :                
+GND*                         : T2        :        :                   :         : 1         :                
+GND*                         : T3        :        :                   :         : 1         :                
+VCCIO1                       : T4        : power  :                   : 2.5V    : 1         :                
+GND*                         : T5        :        :                   :         : 1         :                
+GND*                         : T6        :        :                   :         : 1         :                
+GND*                         : T7        :        :                   :         : 8         :                
+GND*                         : T8        :        :                   :         : 8         :                
+VCCIO8                       : T9        : power  :                   : 2.5V    : 8         :                
+GND                          : T10       : gnd    :                   :         :           :                
+GND*                         : T11       :        :                   :         : 8         :                
+VCCINT                       : T12       : power  :                   : 1.2V    :           :                
+GND                          : T13       : gnd    :                   :         :           :                
+VCCIO7                       : T14       : power  :                   : 2.5V    : 7         :                
+VCCINT                       : T15       : power  :                   : 1.2V    :           :                
+GND*                         : T16       :        :                   :         : 7         :                
+GND_PLL4                     : T17       : gnd    :                   :         :           :                
+GND*                         : T18       :        :                   :         : 6         :                
+VCCIO6                       : T19       : power  :                   : 2.5V    : 6         :                
+GND                          : T20       : gnd    :                   :         :           :                
+GND*                         : T21       :        :                   :         : 6         :                
+GND*                         : T22       :        :                   :         : 6         :                
+GND*                         : U1        :        :                   :         : 1         :                
+GND*                         : U2        :        :                   :         : 1         :                
+GND*                         : U3        :        :                   :         : 1         :                
+GND*                         : U4        :        :                   :         : 1         :                
+GND_PLL1                     : U5        : gnd    :                   :         :           :                
+VCCD_PLL1                    : U6        : power  :                   : 1.2V    :           :                
+VCCA_PLL1                    : U7        : power  :                   : 1.2V    :           :                
+GND*                         : U8        :        :                   :         : 8         :                
+GND*                         : U9        :        :                   :         : 8         :                
+GND*                         : U10       :        :                   :         : 8         :                
+GND+                         : U11       :        :                   :         : 8         :                
+GND+                         : U12       :        :                   :         : 8         :                
+GND*                         : U13       :        :                   :         : 7         :                
+GND*                         : U14       :        :                   :         : 7         :                
+GND*                         : U15       :        :                   :         : 7         :                
+VCCA_PLL4                    : U16       : power  :                   : 1.2V    :           :                
+VCCD_PLL4                    : U17       : power  :                   : 1.2V    :           :                
+GND*                         : U18       :        :                   :         : 6         :                
+GND*                         : U19       :        :                   :         : 6         :                
+GND*                         : U20       :        :                   :         : 6         :                
+set_min_shi[3]               : U21       : input  : 2.5 V             :         : 6         : N              
+GND*                         : U22       :        :                   :         : 6         :                
+GND*                         : V1        :        :                   :         : 1         :                
+GND*                         : V2        :        :                   :         : 1         :                
+GND                          : V3        : gnd    :                   :         :           :                
+GND*                         : V4        :        :                   :         : 1         :                
+GND_PLL1                     : V5        : gnd    :                   :         :           :                
+GND                          : V6        : gnd    :                   :         :           :                
+GNDA_PLL1                    : V7        : gnd    :                   :         :           :                
+GND*                         : V8        :        :                   :         : 8         :                
+GND*                         : V9        :        :                   :         : 8         :                
+VCCIO8                       : V10       : power  :                   : 2.5V    : 8         :                
+GND*                         : V11       :        :                   :         : 8         :                
+GND+                         : V12       :        :                   :         : 7         :                
+VCCIO7                       : V13       : power  :                   : 2.5V    : 7         :                
+GND*                         : V14       :        :                   :         : 7         :                
+GND*                         : V15       :        :                   :         : 7         :                
+GNDA_PLL4                    : V16       : gnd    :                   :         :           :                
+GND                          : V17       : gnd    :                   :         :           :                
+GND_PLL4                     : V18       : gnd    :                   :         :           :                
+GND*                         : V19       :        :                   :         : 6         :                
+GND*                         : V20       :        :                   :         : 6         :                
+GND*                         : V21       :        :                   :         : 6         :                
+GND*                         : V22       :        :                   :         : 6         :                
+GND*                         : W1        :        :                   :         : 1         :                
+GND*                         : W2        :        :                   :         : 1         :                
+GND*                         : W3        :        :                   :         : 1         :                
+GND*                         : W4        :        :                   :         : 1         :                
+GND*                         : W5        :        :                   :         : 1         :                
+VCCIO8                       : W6        : power  :                   : 2.5V    : 8         :                
+GND*                         : W7        :        :                   :         : 8         :                
+GND*                         : W8        :        :                   :         : 8         :                
+GND*                         : W9        :        :                   :         : 8         :                
+GND                          : W10       : gnd    :                   :         :           :                
+set_hour_shi[3]              : W11       : input  : 2.5 V             :         : 8         : N              
+GND+                         : W12       :        :                   :         : 7         :                
+GND                          : W13       : gnd    :                   :         :           :                
+GND*                         : W14       :        :                   :         : 7         :                
+GND*                         : W15       :        :                   :         : 7         :                
+GND*                         : W16       :        :                   :         : 7         :                
+VCCIO7                       : W17       : power  :                   : 2.5V    : 7         :                
+GND*                         : W18       :        :                   :         : 6         :                
+GND                          : W19       : gnd    :                   :         :           :                
+~LVDS150p/nCEO~              : W20       : output : 2.5 V             :         : 6         : N              
+GND*                         : W21       :        :                   :         : 6         :                
+GND*                         : W22       :        :                   :         : 6         :                
+GND*                         : Y1        :        :                   :         : 1         :                
+GND*                         : Y2        :        :                   :         : 1         :                
+GND*                         : Y3        :        :                   :         : 1         :                
+GND*                         : Y4        :        :                   :         : 1         :                
+GND*                         : Y5        :        :                   :         : 8         :                
+GND*                         : Y6        :        :                   :         : 8         :                
+GND*                         : Y7        :        :                   :         : 8         :                
+GND                          : Y8        : gnd    :                   :         :           :                
+GND*                         : Y9        :        :                   :         : 8         :                
+GND*                         : Y10       :        :                   :         : 8         :                
+VCCIO8                       : Y11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : Y12       : power  :                   : 2.5V    : 7         :                
+hour_shi_r[2]                : Y13       : output : 2.5 V             :         : 7         : N              
+GND*                         : Y14       :        :                   :         : 7         :                
+GND                          : Y15       : gnd    :                   :         :           :                
+GND*                         : Y16       :        :                   :         : 7         :                
+GND*                         : Y17       :        :                   :         : 7         :                
+GND*                         : Y18       :        :                   :         : 6         :                
+GND*                         : Y19       :        :                   :         : 6         :                
+GND*                         : Y20       :        :                   :         : 6         :                
+GND*                         : Y21       :        :                   :         : 6         :                
+GND*                         : Y22       :        :                   :         : 6         :                

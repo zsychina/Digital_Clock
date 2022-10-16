@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dE:\FPGA\Digital_Clock\simulation\qsim
 vTOP
-Z1 !s100 J8_JXZZff8N^KG3:C<6UD3
-Z2 I7c7lz8ofoa9GY^3U<b`eT3
-Z3 V3_nmNFQX^fRS6Wb<P98F20
-Z4 dE:\FPGA\Digital_Clock\simulation\qsim
-Z5 w1661333615
-Z6 8Digital_Clock.vo
-Z7 FDigital_Clock.vo
+Z1 IEaMjo>O:MhODj<`kU9GcT1
+Z2 VjOnI11C@C<[f7Z>RPl[cX3
+Z3 dE:\FPGA\Digital_Clock\simulation\qsim
+Z4 w1665919875
+Z5 8Digital_Clock.vo
+Z6 FDigital_Clock.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|Digital_Clock.vo|
-Z10 o-work work -O0
-Z11 n@t@o@p
+Z8 !s90 -work|work|Digital_Clock.vo|
+Z9 o-work work -O0
+Z10 n@t@o@p
 !i10b 1
+Z11 !s100 bjoVbSF?^=`L0K;4b0EaI2
 !s85 0
-Z12 !s108 1661333620.969000
+Z12 !s108 1665919876.176000
 Z13 !s107 Digital_Clock.vo|
 !s101 -O0
 vTOP_vlg_check_tst
 !i10b 1
-Z14 !s100 WYb6D]lbLXW:>CI7YmL^K0
-Z15 IKUJHDI`@5VN1fWQbYe:F^0
-Z16 V_[KdZVG2hg]S5SSELj0c23
+!s100 VE79ZFS6]5K6<4Xk>13We2
+IGGo@BDB6X<fzi7^hCU^Ud0
+V<zYQ8HjjJl`HeF7l`ST^E3
+R3
 R4
-Z17 w1661333613
-Z18 8Digital_Clock.vt
-Z19 FDigital_Clock.vt
+Z14 8Digital_Clock.vt
+Z15 FDigital_Clock.vt
 L0 83
-R8
+R7
 r1
 !s85 0
 31
-Z20 !s108 1661333621.729000
-Z21 !s107 Digital_Clock.vt|
-Z22 !s90 -work|work|Digital_Clock.vt|
+Z16 !s108 1665919876.317000
+Z17 !s107 Digital_Clock.vt|
+Z18 !s90 -work|work|Digital_Clock.vt|
 !s101 -O0
-R10
-Z23 n@t@o@p_vlg_check_tst
+R9
+Z19 n@t@o@p_vlg_check_tst
 vTOP_vlg_sample_tst
 !i10b 1
-Z24 !s100 TG]gOQ5Y5gacKV34?KP`E3
-Z25 IV;`c1_KT:06m[DO1NfG`F3
-Z26 VFD]5KQKaK[BUc6dd;Z9j@0
+Z20 !s100 TG]gOQ5Y5gacKV34?KP`E3
+Z21 IV;`c1_KT:06m[DO1NfG`F3
+Z22 VFD]5KQKaK[BUc6dd;Z9j@0
+R3
 R4
-R17
-R18
-R19
+R14
+R15
 L0 29
-R8
+R7
 r1
 !s85 0
 31
-R20
-R21
-R22
+R16
+R17
+R18
 !s101 -O0
-R10
-Z27 n@t@o@p_vlg_sample_tst
+R9
+Z23 n@t@o@p_vlg_sample_tst
 vTOP_vlg_vec_tst
 !i10b 1
-Z28 !s100 <6i5FODHKjl>`nkXDhm;52
-Z29 IL=76B9f^T_>Y6C6W:YDdb0
-Z30 VBDbZc5TUj`4DT17_5R<4L1
+!s100 ekb?OzTRQm>;zne<FRQd@0
+IMJ_C;AFOlUSOWQggQW3D`0
+Z24 VBDbZc5TUj`4DT17_5R<4L1
+R3
 R4
-R17
-R18
-R19
-Z31 L0 829
-R8
+R14
+R15
+L0 948
+R7
 r1
 !s85 0
 31
-R20
-R21
-R22
+R16
+R17
+R18
 !s101 -O0
-R10
-Z32 n@t@o@p_vlg_vec_tst
+R9
+Z25 n@t@o@p_vlg_vec_tst

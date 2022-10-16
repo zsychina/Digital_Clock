@@ -952,6 +952,86 @@ SIGNAL("out_sec_ge_seg[0]")
 	PARENT = "out_sec_ge_seg";
 }
 
+SIGNAL("out_sec_shi_seg")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("out_sec_shi_seg[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
+SIGNAL("out_sec_shi_seg[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
+SIGNAL("out_sec_shi_seg[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
+SIGNAL("out_sec_shi_seg[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
+SIGNAL("out_sec_shi_seg[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
+SIGNAL("out_sec_shi_seg[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
+SIGNAL("out_sec_shi_seg[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "out_sec_shi_seg";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -1591,9 +1671,9 @@ TRANSITION_LIST("set_time_finish")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 520.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 470.0;
+		LEVEL 1 FOR 520.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 470.0;
 	}
 }
 
@@ -1652,6 +1732,69 @@ TRANSITION_LIST("out_sec_ge_seg[1]")
 }
 
 TRANSITION_LIST("out_sec_ge_seg[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("out_sec_shi_seg[0]")
 {
 	NODE
 	{
@@ -2574,6 +2717,86 @@ DISPLAY_LINE
 	TREE_INDEX = 91;
 	TREE_LEVEL = 1;
 	PARENT = 87;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 92;
+	TREE_LEVEL = 0;
+	CHILDREN = 93, 94, 95, 96, 97, 98, 99;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 93;
+	TREE_LEVEL = 1;
+	PARENT = 92;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 94;
+	TREE_LEVEL = 1;
+	PARENT = 92;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 95;
+	TREE_LEVEL = 1;
+	PARENT = 92;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 96;
+	TREE_LEVEL = 1;
+	PARENT = 92;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 97;
+	TREE_LEVEL = 1;
+	PARENT = 92;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 98;
+	TREE_LEVEL = 1;
+	PARENT = 92;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_sec_shi_seg[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 99;
+	TREE_LEVEL = 1;
+	PARENT = 92;
 }
 
 TIME_BAR
