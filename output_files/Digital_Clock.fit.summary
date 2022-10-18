@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Oct 18 21:41:09 2022
+Fitter Status : Successful - Wed Oct 19 00:08:19 2022
 Quartus II 32-bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : Digital_Clock
 Top-level Entity Name : TOP
 Family : Cyclone IV E
-Device : EP4CE6F17A7
+Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 125 / 6,272 ( 2 % )
+Total logic elements : 124 / 6,272 ( 2 % )
     Total combinational functions : 120 / 6,272 ( 2 % )
     Dedicated logic registers : 84 / 6,272 ( 1 % )
 Total registers : 84
-Total pins : 111 / 180 ( 62 % )
+Total pins : 87 / 92 ( 95 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

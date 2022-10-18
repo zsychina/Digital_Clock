@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Digital_Clock
-Tue Oct 18 21:41:03 2022
+Wed Oct 19 00:08:14 2022
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 18 21:41:03 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 19 00:08:14 2022       ;
 ; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; Digital_Clock                               ;
 ; Top-level Entity Name              ; TOP                                         ;
@@ -53,7 +53,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 120                                         ;
 ;     Dedicated logic registers      ; 84                                          ;
 ; Total registers                    ; 84                                          ;
-; Total pins                         ; 111                                         ;
+; Total pins                         ; 87                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE6F17A7        ;                    ;
+; Device                                                                     ; EP4CE6E22C8        ;                    ;
 ; Top-level entity name                                                      ; TOP                ; Digital_Clock      ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -197,12 +197,12 @@ applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 84        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 111       ;
+; I/O pins                                    ; 87        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 84        ;
-; Total fan-out                               ; 863       ;
-; Average fan-out                             ; 2.03      ;
+; Total fan-out                               ; 819       ;
+; Average fan-out                             ; 2.17      ;
 +---------------------------------------------+-----------+
 
 
@@ -211,9 +211,9 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |TOP                                ; 120 (0)           ; 84 (0)       ; 0           ; 0            ; 0       ; 0         ; 111  ; 0            ; |TOP                                ;              ;
-;    |display_ctrl:display_ctrl_inst| ; 43 (43)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|display_ctrl:display_ctrl_inst ;              ;
-;    |time_control:time_control_inst| ; 77 (77)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|time_control:time_control_inst ;              ;
+; |TOP                                ; 120 (0)           ; 84 (0)       ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |TOP                                ;              ;
+;    |display_ctrl:display_ctrl_inst| ; 45 (45)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|display_ctrl:display_ctrl_inst ;              ;
+;    |time_control:time_control_inst| ; 75 (75)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|time_control:time_control_inst ;              ;
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -248,14 +248,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|hour_shi[1]    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|min_ge[3]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|min_shi[0]     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|sec_ge[0]      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|sec_shi[0]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|min_ge[0]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|min_shi[0]     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|hour_shi[1]    ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |TOP|display_ctrl:display_ctrl_inst|out_sec_ge[3]  ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |TOP|display_ctrl:display_ctrl_inst|out_min_ge[6]  ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |TOP|display_ctrl:display_ctrl_inst|out_hour_ge[6] ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |TOP|display_ctrl:display_ctrl_inst|out_hour_ge[3] ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |TOP|display_ctrl:display_ctrl_inst|out_min_ge[5]  ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |TOP|display_ctrl:display_ctrl_inst|out_sec_ge[1]  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP|time_control:time_control_inst|hour_ge[3]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
@@ -275,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Tue Oct 18 21:41:02 2022
+    Info: Processing started: Wed Oct 19 00:08:12 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Digital_Clock -c Digital_Clock
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file code/top.v
@@ -284,27 +284,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file code/di
     Info (12023): Found entity 1: display_ctrl
 Info (12021): Found 1 design units, including 1 entities, in source file code/time_control.v
     Info (12023): Found entity 1: time_control
+Warning (10236): Verilog HDL Implicit Net warning at TOP.v(54): created implicit net for "sec_ge_r"
+Warning (10236): Verilog HDL Implicit Net warning at TOP.v(55): created implicit net for "sec_shi_r"
+Warning (10236): Verilog HDL Implicit Net warning at TOP.v(56): created implicit net for "min_ge_r"
+Warning (10236): Verilog HDL Implicit Net warning at TOP.v(57): created implicit net for "min_shi_r"
+Warning (10236): Verilog HDL Implicit Net warning at TOP.v(58): created implicit net for "hour_ge_r"
+Warning (10236): Verilog HDL Implicit Net warning at TOP.v(59): created implicit net for "hour_shi_r"
 Info (12127): Elaborating entity "TOP" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at TOP.v(54): object "sec_ge_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP.v(55): object "sec_shi_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP.v(56): object "min_ge_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP.v(57): object "min_shi_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP.v(58): object "hour_ge_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP.v(59): object "hour_shi_r" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at TOP.v(54): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at TOP.v(55): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at TOP.v(56): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at TOP.v(57): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at TOP.v(58): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at TOP.v(59): truncated value with size 4 to match size of target (1)
 Info (12128): Elaborating entity "time_control" for hierarchy "time_control:time_control_inst"
-Warning (10036): Verilog HDL or VHDL warning at time_control.v(51): object "flag_1s" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at time_control.v(189): object "flag_hour_shi" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at time_control.v(45): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at time_control.v(63): truncated value with size 32 to match size of target (12)
-Warning (10230): Verilog HDL assignment warning at time_control.v(96): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at time_control.v(111): truncated value with size 4 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at time_control.v(120): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at time_control.v(151): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at time_control.v(166): truncated value with size 4 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at time_control.v(175): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at time_control.v(210): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at time_control.v(225): truncated value with size 4 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at time_control.v(234): truncated value with size 32 to match size of target (2)
+Warning (10036): Verilog HDL or VHDL warning at time_control.v(52): object "flag_1s" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at time_control.v(190): object "flag_hour_shi" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at time_control.v(46): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at time_control.v(64): truncated value with size 32 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at time_control.v(97): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at time_control.v(112): truncated value with size 4 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at time_control.v(121): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at time_control.v(152): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at time_control.v(167): truncated value with size 4 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at time_control.v(176): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at time_control.v(211): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at time_control.v(226): truncated value with size 4 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at time_control.v(235): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "display_ctrl" for hierarchy "display_ctrl:display_ctrl_inst"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sec_shi_r[3]" is stuck at GND
-    Warning (13410): Pin "min_shi_r[3]" is stuck at GND
-    Warning (13410): Pin "hour_shi_r[2]" is stuck at GND
-    Warning (13410): Pin "hour_shi_r[3]" is stuck at GND
     Warning (13410): Pin "out_hour_shi_seg[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file E:/FPGA/Digital_Clock/output_files/Digital_Clock.map.smsg
@@ -315,14 +329,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "set_min_shi[3]"
     Warning (15610): No output dependent on input pin "set_hour_shi[2]"
     Warning (15610): No output dependent on input pin "set_hour_shi[3]"
-Info (21057): Implemented 237 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 213 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 44 input pins
-    Info (21059): Implemented 67 output pins
+    Info (21059): Implemented 43 output pins
     Info (21061): Implemented 126 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 38 warnings
     Info: Peak virtual memory: 391 megabytes
-    Info: Processing ended: Tue Oct 18 21:41:03 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Oct 19 00:08:14 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

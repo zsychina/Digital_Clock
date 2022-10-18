@@ -15,7 +15,8 @@ module time_control(
     input 	[3:0]	clock_min_shi,
     input 	[3:0]	clock_hour_ge,
     input 	[3:0]	clock_hour_shi,
-    output	reg		clock_out,
+    // output	reg		clock_out,
+    output  clock_out_w,
 
     output	[3:0]	sec_ge_r,
     output	[3:0]	sec_shi_r,
@@ -250,6 +251,7 @@ assign	hour_ge_r = hour_ge;
 assign	hour_shi_r = hour_shi;
 
 //=================闹钟设置===================//
+reg clock_out;
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)	begin
         clock_out <= 0;
@@ -257,13 +259,18 @@ always @(posedge clk or negedge rst_n) begin
     else if(!clock_en)	begin
         clock_out <= 0;
     end
-    else if({hour_shi,hour_ge,min_shi,min_ge} == {clock_hour_shi,clock_hour_ge,clock_min_shi,clock_min_ge})	begin
+    else if((hour_shi == clock_hour_shi) &&
+            (hour_ge == clock_hour_ge) &&
+            (min_shi == clock_min_shi) &&
+            (min_ge == clock_min_ge)) begin
         clock_out <= 1;
     end
     else	begin
         clock_out <= clock_out;
     end
 end
+assign clock_out_w = clock_out;
+
 //============================================//
 
 

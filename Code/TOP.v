@@ -3,7 +3,7 @@ module TOP(
     input	clk,
     input	rst_n,
 
-    input	set_time_finish,		//设置时间
+    input	set_time_finish,
     input 	[3:0]	set_sec_ge,
     input 	[3:0]	set_sec_shi, 
     input 	[3:0]	set_min_ge,  
@@ -11,21 +11,21 @@ module TOP(
     input 	[3:0]	set_hour_ge,
     input 	[3:0]	set_hour_shi,
     
-    input	clock_en,				//闹钟开关，置“1”打开闹钟；置“0”关闭闹钟。
+    input	clock_en,
     input 	[3:0]	clock_min_ge,
     input 	[3:0]	clock_min_shi,
     input 	[3:0]	clock_hour_ge,
     input 	[3:0]	clock_hour_shi,
-    output	clock_out,
+    output  clock_out,
 
-    output	[3:0]	sec_ge_r,
-    output	[3:0]	sec_shi_r,
-    output	[3:0]	min_ge_r,
-    output	[3:0]	min_shi_r,
-    output	[3:0]	hour_ge_r,
-    output	[3:0]	hour_shi_r,
+    // output	[3:0]	sec_ge_r,
+    // output	[3:0]	sec_shi_r,
+    // output	[3:0]	min_ge_r,
+    // output	[3:0]	min_shi_r,
+    // output	[3:0]	hour_ge_r,
+    // output	[3:0]	hour_shi_r,
 
-     //数码管输出
+
     output [6:0] out_sec_ge_seg,
     output [6:0] out_sec_shi_seg,
     output [6:0] out_min_ge_seg,
@@ -34,14 +34,13 @@ module TOP(
     output [6:0] out_hour_shi_seg
 );
 
-wire 	[3:0]	sec_ge_rr;
-wire	[3:0]	sec_shi_rr;
-wire	[3:0]	min_ge_rr;
-wire	[3:0]	min_shi_rr;
-wire	[3:0]	hour_ge_rr;
-wire	[3:0]	hour_shi_rr;
+wire [3:0]	sec_ge_rr;
+wire [3:0]	sec_shi_rr;
+wire [3:0]	min_ge_rr;
+wire [3:0]	min_shi_rr;
+wire [3:0]	hour_ge_rr;
+wire [3:0]	hour_shi_rr;
 
-wire clock_out_r;
 
 wire    [6:0]   out_sec_ge_seg_temp;
 wire    [6:0]   out_sec_shi_seg_temp;
@@ -66,7 +65,6 @@ assign out_min_shi_seg = out_min_shi_seg_temp;
 assign out_hour_ge_seg = out_hour_ge_seg_temp;
 assign out_hour_shi_seg = out_hour_shi_seg_temp;
 
-assign clock_out = clock_out_r;
 
 //------------------------------//
 time_control			time_control_inst(
@@ -86,7 +84,7 @@ time_control			time_control_inst(
     .clock_min_shi		(clock_min_shi),
     .clock_hour_ge		(clock_hour_ge),
     .clock_hour_shi		(clock_hour_shi),
-    .clock_out			(clock_out_r),
+    .clock_out_w		(clock_out),
 
     .sec_ge_r			(sec_ge_rr),
     .sec_shi_r			(sec_shi_rr),
