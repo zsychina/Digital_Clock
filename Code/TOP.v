@@ -41,12 +41,15 @@ wire	[3:0]	min_shi_rr;
 wire	[3:0]	hour_ge_rr;
 wire	[3:0]	hour_shi_rr;
 
+wire clock_out_r;
+
 wire    [6:0]   out_sec_ge_seg_temp;
 wire    [6:0]   out_sec_shi_seg_temp;
 wire    [6:0]   out_min_ge_seg_temp;
 wire    [6:0]   out_min_shi_seg_temp;
 wire    [6:0]   out_hour_ge_seg_temp;
 wire    [6:0]   out_hour_shi_seg_temp;
+
 
 // assigning
 assign	sec_ge_r = sec_ge_rr;
@@ -63,7 +66,7 @@ assign out_min_shi_seg = out_min_shi_seg_temp;
 assign out_hour_ge_seg = out_hour_ge_seg_temp;
 assign out_hour_shi_seg = out_hour_shi_seg_temp;
 
-
+assign clock_out = clock_out_r;
 
 //------------------------------//
 time_control			time_control_inst(
@@ -83,7 +86,7 @@ time_control			time_control_inst(
     .clock_min_shi		(clock_min_shi),
     .clock_hour_ge		(clock_hour_ge),
     .clock_hour_shi		(clock_hour_shi),
-    .clock_out			(clock_out),
+    .clock_out			(clock_out_r),
 
     .sec_ge_r			(sec_ge_rr),
     .sec_shi_r			(sec_shi_rr),

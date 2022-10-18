@@ -1,5 +1,5 @@
 Flow report for Digital_Clock
-Sun Oct 16 19:31:15 2022
+Tue Oct 18 21:41:16 2022
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Oct 16 19:31:15 2022       ;
+; Flow Status                        ; Successful - Tue Oct 18 21:41:16 2022       ;
 ; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; Digital_Clock                               ;
 ; Top-level Entity Name              ; TOP                                         ;
-; Family                             ; Cyclone II                                  ;
-; Device                             ; EP2C35F484C6                                ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE6F17A7                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 125 / 33,216 ( < 1 % )                      ;
-;     Total combinational functions  ; 119 / 33,216 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 84 / 33,216 ( < 1 % )                       ;
+; Total logic elements               ; 125 / 6,272 ( 2 % )                         ;
+;     Total combinational functions  ; 120 / 6,272 ( 2 % )                         ;
+;     Dedicated logic registers      ; 84 / 6,272 ( 1 % )                          ;
 ; Total registers                    ; 84                                          ;
-; Total pins                         ; 111 / 322 ( 34 % )                          ;
+; Total pins                         ; 111 / 180 ( 62 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2022 19:30:55 ;
+; Start date & time ; 10/18/2022 21:41:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Digital_Clock       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 220283518175844.166591985416608 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 220283518175844.166610046206460 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME              ; NA                              ; --            ; --          ; tb_TOP         ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST       ; On                              ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_PORTABLE_FILE_PATHS    ; On                              ; --            ; --          ; eda_simulation ;
@@ -87,8 +87,8 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME            ; tb_TOP                          ; --            ; --          ; tb_TOP         ;
 ; EDA_TEST_BENCH_NAME                   ; tb_TOP                          ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                        ; 1 ps                            ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                ; 125                             ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                ; -40                             ; --            ; --          ; --             ;
 ; PARTITION_COLOR                       ; 16764057                        ; --            ; TOP         ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING           ; --            ; TOP         ; Top            ;
 ; PARTITION_NETLIST_TYPE                ; SOURCE                          ; --            ; TOP         ; Top            ;
@@ -104,14 +104,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 363 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 3.0                     ; 629 MB              ; 00:00:07                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 381 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 349 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 338 MB              ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 329 MB              ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 336 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 391 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.6                     ; 678 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 356 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 386 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 328 MB              ; 00:00:00                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -125,8 +123,6 @@ applicable agreement for further details.
 ; Assembler                 ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -138,8 +134,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off Digital_Clock -
 quartus_asm --read_settings_files=off --write_settings_files=off Digital_Clock -c Digital_Clock
 quartus_sta Digital_Clock -c Digital_Clock
 quartus_eda --read_settings_files=off --write_settings_files=off Digital_Clock -c Digital_Clock
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Digital_Clock -c Digital_Clock --vector_source=E:/FPGA/Digital_Clock/Waveform.vwf --testbench_file=./simulation/qsim/Digital_Clock.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Digital_Clock -c Digital_Clock
 
 
 

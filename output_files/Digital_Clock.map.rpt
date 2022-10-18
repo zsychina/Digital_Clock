@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Digital_Clock
-Sun Oct 16 19:30:55 2022
+Tue Oct 18 21:41:03 2022
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 16 19:30:55 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 18 21:41:03 2022       ;
 ; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; Digital_Clock                               ;
 ; Top-level Entity Name              ; TOP                                         ;
-; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 122                                         ;
-;     Total combinational functions  ; 119                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 123                                         ;
+;     Total combinational functions  ; 120                                         ;
 ;     Dedicated logic registers      ; 84                                          ;
 ; Total registers                    ; 84                                          ;
 ; Total pins                         ; 111                                         ;
@@ -66,9 +66,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP2C35F484C6       ;                    ;
+; Device                                                                     ; EP4CE6F17A7        ;                    ;
 ; Top-level entity name                                                      ; TOP                ; Digital_Clock      ;
-; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -107,12 +107,14 @@ applicable agreement for further details.
 ; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
 ; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
 ; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
 ; Auto Resource Sharing                                                      ; Off                ; Off                ;
 ; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
@@ -120,7 +122,7 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
 ; Report Parameter Settings                                                  ; On                 ; On                 ;
 ; Report Source Assignments                                                  ; On                 ; On                 ;
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
@@ -174,34 +176,34 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 122   ;
-;                                             ;       ;
-; Total combinational functions               ; 119   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 56    ;
-;     -- 3 input functions                    ; 27    ;
-;     -- <=2 input functions                  ; 36    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 104   ;
-;     -- arithmetic mode                      ; 15    ;
-;                                             ;       ;
-; Total registers                             ; 84    ;
-;     -- Dedicated logic registers            ; 84    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 111   ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 84    ;
-; Total fan-out                               ; 748   ;
-; Average fan-out                             ; 2.38  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 123       ;
+;                                             ;           ;
+; Total combinational functions               ; 120       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 57        ;
+;     -- 3 input functions                    ; 27        ;
+;     -- <=2 input functions                  ; 36        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 105       ;
+;     -- arithmetic mode                      ; 15        ;
+;                                             ;           ;
+; Total registers                             ; 84        ;
+;     -- Dedicated logic registers            ; 84        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 111       ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 84        ;
+; Total fan-out                               ; 863       ;
+; Average fan-out                             ; 2.03      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,9 +211,9 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |TOP                                ; 119 (0)           ; 84 (0)       ; 0           ; 0            ; 0       ; 0         ; 111  ; 0            ; |TOP                                ;              ;
-;    |display_ctrl:display_ctrl_inst| ; 41 (41)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|display_ctrl:display_ctrl_inst ;              ;
-;    |time_control:time_control_inst| ; 78 (78)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|time_control:time_control_inst ;              ;
+; |TOP                                ; 120 (0)           ; 84 (0)       ; 0           ; 0            ; 0       ; 0         ; 111  ; 0            ; |TOP                                ;              ;
+;    |display_ctrl:display_ctrl_inst| ; 43 (43)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|display_ctrl:display_ctrl_inst ;              ;
+;    |time_control:time_control_inst| ; 77 (77)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|time_control:time_control_inst ;              ;
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -273,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sun Oct 16 19:30:54 2022
+    Info: Processing started: Tue Oct 18 21:41:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Digital_Clock -c Digital_Clock
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file code/top.v
@@ -304,6 +306,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "hour_shi_r[2]" is stuck at GND
     Warning (13410): Pin "hour_shi_r[3]" is stuck at GND
     Warning (13410): Pin "out_hour_shi_seg[1]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file E:/FPGA/Digital_Clock/output_files/Digital_Clock.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -312,13 +315,13 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "set_min_shi[3]"
     Warning (15610): No output dependent on input pin "set_hour_shi[2]"
     Warning (15610): No output dependent on input pin "set_hour_shi[3]"
-Info (21057): Implemented 236 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 237 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 44 input pins
     Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 125 logic cells
+    Info (21061): Implemented 126 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 370 megabytes
-    Info: Processing ended: Sun Oct 16 19:30:55 2022
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Tue Oct 18 21:41:03 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
