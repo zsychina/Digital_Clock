@@ -104,9 +104,9 @@ GND*                         : AA9       :        :                   :         
 GND*                         : AA10      :        :                   :         : 8         :                
 GND*                         : AA11      :        :                   :         : 8         :                
 GND*                         : AA12      :        :                   :         : 8         :                
-hour_shi_r[1]                : AA13      : output : 2.5 V             :         : 7         : N              
-sec_ge_r[2]                  : AA14      : output : 2.5 V             :         : 7         : N              
-sec_ge_r[3]                  : AA15      : output : 2.5 V             :         : 7         : N              
+GND*                         : AA13      :        :                   :         : 7         :                
+GND*                         : AA14      :        :                   :         : 7         :                
+GND*                         : AA15      :        :                   :         : 7         :                
 GND*                         : AA16      :        :                   :         : 7         :                
 GND*                         : AA17      :        :                   :         : 7         :                
 GND*                         : AA18      :        :                   :         : 7         :                
@@ -132,7 +132,7 @@ GND                          : AB11      : gnd    :                   :         
 out_sec_ge_seg[1]            : AB12      : output : 3.3-V LVTTL       :         : 8         : Y              
 VCCIO8                       : AB13      : power  :                   : 3.3V    : 8         :                
 VCCIO7                       : AB14      : power  :                   : 2.5V    : 7         :                
-sec_ge_r[0]                  : AB15      : output : 2.5 V             :         : 7         : N              
+GND*                         : AB15      :        :                   :         : 7         :                
 GND                          : AB16      : gnd    :                   :         :           :                
 VCCIO7                       : AB17      : power  :                   : 2.5V    : 7         :                
 GND*                         : AB18      :        :                   :         : 7         :                
@@ -157,9 +157,9 @@ GND*                         : AC10      :        :                   :         
 GND*                         : AC11      :        :                   :         : 8         :                
 out_sec_ge_seg[2]            : AC12      : output : 3.3-V LVTTL       :         : 8         : Y              
 clock_min_shi[2]             : AC13      : input  : 2.5 V             :         : 8         : Y              
-min_shi_r[1]                 : AC14      : output : 2.5 V             :         : 7         : N              
-sec_shi_r[2]                 : AC15      : output : 2.5 V             :         : 7         : N              
-min_ge_r[2]                  : AC16      : output : 2.5 V             :         : 7         : N              
+GND*                         : AC14      :        :                   :         : 7         :                
+GND*                         : AC15      :        :                   :         : 7         :                
+GND*                         : AC16      :        :                   :         : 7         :                
 GND*                         : AC17      :        :                   :         : 7         :                
 GND*                         : AC18      :        :                   :         : 7         :                
 GND*                         : AC19      :        :                   :         : 7         :                
@@ -184,9 +184,9 @@ out_sec_ge_seg[3]            : AD11      : output : 3.3-V LVTTL       :         
 GND*                         : AD12      :        :                   :         : 8         :                
 clock_min_shi[1]             : AD13      : input  : 2.5 V             :         : 8         : Y              
 GND                          : AD14      : gnd    :                   :         :           :                
-hour_ge_r[0]                 : AD15      : output : 2.5 V             :         : 7         : N              
-hour_ge_r[1]                 : AD16      : output : 2.5 V             :         : 7         : N              
-min_ge_r[1]                  : AD17      : output : 2.5 V             :         : 7         : N              
+GND*                         : AD15      :        :                   :         : 7         :                
+GND*                         : AD16      :        :                   :         : 7         :                
+GND*                         : AD17      :        :                   :         : 7         :                
 GND                          : AD18      : gnd    :                   :         :           :                
 GND*                         : AD19      :        :                   :         : 7         :                
 VCCIO7                       : AD20      : power  :                   : 2.5V    : 7         :                
@@ -210,9 +210,9 @@ out_sec_ge_seg[4]            : AE11      : output : 3.3-V LVTTL       :         
 GND*                         : AE12      :        :                   :         : 8         :                
 GND*                         : AE13      :        :                   :         : 8         :                
 clock_min_ge[3]              : AE14      : input  : 2.5 V             :         : 7         : Y              
-min_shi_r[0]                 : AE15      : output : 2.5 V             :         : 7         : N              
-sec_shi_r[0]                 : AE16      : output : 2.5 V             :         : 7         : N              
-min_ge_r[3]                  : AE17      : output : 2.5 V             :         : 7         : N              
+GND*                         : AE15      :        :                   :         : 7         :                
+GND*                         : AE16      :        :                   :         : 7         :                
+GND*                         : AE17      :        :                   :         : 7         :                
 GND*                         : AE18      :        :                   :         : 7         :                
 GND*                         : AE19      :        :                   :         : 7         :                
 GND*                         : AE20      :        :                   :         : 7         :                
@@ -237,7 +237,7 @@ GND*                         : AF13      :        :                   :         
 clock_min_shi[0]             : AF14      : input  : 2.5 V             :         : 7         : Y              
 GND                          : AF15      : gnd    :                   :         :           :                
 VCCIO7                       : AF16      : power  :                   : 2.5V    : 7         :                
-sec_shi_r[1]                 : AF17      : output : 2.5 V             :         : 7         : N              
+GND*                         : AF17      :        :                   :         : 7         :                
 GND*                         : AF18      :        :                   :         : 7         :                
 GND*                         : AF19      :        :                   :         : 7         :                
 GND*                         : AF20      :        :                   :         : 7         :                
@@ -259,7 +259,7 @@ GND*                         : B10       :        :                   :         
 GND*                         : B11       :        :                   :         : 3         :                
 GND*                         : B12       :        :                   :         : 3         :                
 clock_hour_ge[0]             : B13       : input  : 2.5 V             :         : 4         : Y              
-hour_shi_r[0]                : B14       : output : 2.5 V             :         : 4         : N              
+GND*                         : B14       :        :                   :         : 4         :                
 GND*                         : B15       :        :                   :         : 4         :                
 GND*                         : B16       :        :                   :         : 4         :                
 GND*                         : B17       :        :                   :         : 4         :                
@@ -296,7 +296,7 @@ GND*                         : C21       :        :                   :         
 GND*                         : C22       :        :                   :         : 4         :                
 GND*                         : C23       :        :                   :         : 4         :                
 GND*                         : C24       :        :                   :         : 5         :                
-hour_shi_r[2]                : C25       : output : 2.5 V             :         : 5         : N              
+GND*                         : C25       :        :                   :         : 5         :                
 VCCIO5                       : C26       : power  :                   : 2.5V    : 5         :                
 GND*                         : D1        :        :                   :         : 2         :                
 GND*                         : D2        :        :                   :         : 2         :                
@@ -324,7 +324,7 @@ GND*                         : D23       :        :                   :         
 GND                          : D24       : gnd    :                   :         :           :                
 GND*                         : D25       :        :                   :         : 5         :                
 GND*                         : D26       :        :                   :         : 5         :                
-sec_shi_r[3]                 : E1        : output : 2.5 V             :         : 2         : N              
+GND*                         : E1        :        :                   :         : 2         :                
 GND*                         : E2        :        :                   :         : 2         :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E3        : input  : 2.5 V             :         : 2         : N              
 GND_PLL3                     : E4        : gnd    :                   :         :           :                
@@ -392,7 +392,7 @@ GND*                         : G13       :        :                   :         
 GND*                         : G14       :        :                   :         : 4         :                
 GND*                         : G15       :        :                   :         : 4         :                
 GND*                         : G16       :        :                   :         : 4         :                
-hour_shi_r[3]                : G17       : output : 2.5 V             :         : 4         : N              
+GND*                         : G17       :        :                   :         : 4         :                
 GND*                         : G18       :        :                   :         : 4         :                
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
@@ -702,11 +702,11 @@ GND*                         : W11       :        :                   :         
 GND*                         : W12       :        :                   :         : 8         :                
 GND                          : W13       : gnd    :                   :         :           :                
 GND                          : W14       : gnd    :                   :         :           :                
-min_shi_r[2]                 : W15       : output : 2.5 V             :         : 7         : N              
-min_ge_r[0]                  : W16       : output : 2.5 V             :         : 7         : N              
+GND*                         : W15       :        :                   :         : 7         :                
+GND*                         : W16       :        :                   :         : 7         :                
 GND*                         : W17       :        :                   :         : 7         :                
 VCCIO7                       : W18       : power  :                   : 2.5V    : 7         :                
-min_shi_r[3]                 : W19       : output : 2.5 V             :         : 7         : N              
+GND*                         : W19       :        :                   :         : 7         :                
 GND_PLL4                     : W20       : gnd    :                   :         :           :                
 out_sec_shi_seg[2]           : W21       : output : 3.3-V LVTTL       :         : 6         : Y              
 GND                          : W22       : gnd    :                   :         :           :                
@@ -726,9 +726,9 @@ GND                          : Y9        : gnd    :                   :         
 GND*                         : Y10       :        :                   :         : 8         :                
 GND*                         : Y11       :        :                   :         : 8         :                
 clock_out                    : Y12       : output : 3.3-V LVTTL       :         : 8         : Y              
-sec_ge_r[1]                  : Y13       : output : 2.5 V             :         : 7         : N              
-hour_ge_r[3]                 : Y14       : output : 2.5 V             :         : 7         : N              
-hour_ge_r[2]                 : Y15       : output : 2.5 V             :         : 7         : N              
+GND*                         : Y13       :        :                   :         : 7         :                
+GND*                         : Y14       :        :                   :         : 7         :                
+GND*                         : Y15       :        :                   :         : 7         :                
 GND*                         : Y16       :        :                   :         : 7         :                
 GND                          : Y17       : gnd    :                   :         :           :                
 GND*                         : Y18       :        :                   :         : 7         :                

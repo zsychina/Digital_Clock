@@ -18,12 +18,12 @@ module time_control(
     // output	reg		clock_out,
     output  clock_out_w,
 
-    // output	[3:0]	sec_ge_r,
-    // output	[3:0]	sec_shi_r,
-    // output	[3:0]	min_ge_r,
-    // output	[3:0]	min_shi_r,
-    // output	[3:0]	hour_ge_r,
-    // output	[3:0]	hour_shi_r
+    output	[3:0]	sec_ge_r,
+    output	[3:0]	sec_shi_r,
+    output	[3:0]	min_ge_r,
+    output	[3:0]	min_shi_r,
+    output	[3:0]	hour_ge_r,
+    output	[3:0]	hour_shi_r
 );
 
 
@@ -65,7 +65,7 @@ always @(posedge clk or negedge rst_n) begin
         flag_1ms <= 0;
     end
 end
-//--------1s瀵よ埖妞-------//
+
 reg		[11:0]	cnt_1s;		
 reg		flag_1s;			
 always @(posedge clk or negedge rst_n) begin
@@ -291,9 +291,9 @@ end
 //============================================//
 
 // hourly report
-reg [3:0] parity_cnt;
+reg [15:0] parity_cnt;
 reg clock_out_h;
-always @(posedge clk or negedge rst_n) begin
+always @(posedge flag_1ms or negedge rst_n) begin
     if(!rst_n) begin
         clock_out_h <= 0;
     end
@@ -306,7 +306,7 @@ always @(posedge clk or negedge rst_n) begin
         (sec_shi == 4'h5)
     ) begin
         parity_cnt = parity_cnt + 1;
-        if(parity_cnt%2) begin
+        if(parity_cnt%2 == 1) begin  //change to 1000 when actually use
             clock_out_h <= 1;
         end
         else begin

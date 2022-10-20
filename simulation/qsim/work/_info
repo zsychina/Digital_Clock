@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dE:\FPGA\Digital_Clock\simulation\qsim
 vTOP
-Z1 I]7K^n_YH4?>g3><n?NX7c3
-Z2 Vl^[:ijINS[f[2XmP=MMSW0
+Z1 IZO0?76SS13MI5?]4gc[BU2
+Z2 V3>ITgA9<Pf9c26K3JGRDm2
 Z3 dE:\FPGA\Digital_Clock\simulation\qsim
-Z4 w1666264646
+Z4 w1666265718
 Z5 8Digital_Clock.vo
 Z6 FDigital_Clock.vo
 L0 31
@@ -18,68 +18,68 @@ Z8 !s90 -work|work|Digital_Clock.vo|
 Z9 o-work work -O0
 Z10 n@t@o@p
 !i10b 1
-Z11 !s100 7ilhz6E4l8JKG^YIkBFm_1
+Z11 !s100 2zD2gE4OUiQUaNkK6zYLa1
 !s85 0
-Z12 !s108 1666264647.301000
+Z12 !s108 1666265719.060000
 Z13 !s107 Digital_Clock.vo|
 !s101 -O0
 vTOP_vlg_check_tst
 !i10b 1
-Z14 !s100 BF>@F6Th3o:TIa>^:Xlad3
-Z15 IIX3eAOY=KYn_:[Mf]?Taz2
-Z16 V<zYQ8HjjJl`HeF7l`ST^E3
+Z14 !s100 :3Y=EaMGaNJkd2n9V9L9<3
+Z15 I3k;EekZc@SH`c2ezD4KFD0
+Z16 VgO9GY3?5?3;bQ8Rb5gY;T3
 R3
-R4
-Z17 8Digital_Clock.vt
-Z18 FDigital_Clock.vt
+Z17 w1666265717
+Z18 8Digital_Clock.vt
+Z19 FDigital_Clock.vt
 L0 71
 R7
 r1
 !s85 0
 31
-Z19 !s108 1666264647.578000
-Z20 !s107 Digital_Clock.vt|
-Z21 !s90 -work|work|Digital_Clock.vt|
+Z20 !s108 1666265719.261000
+Z21 !s107 Digital_Clock.vt|
+Z22 !s90 -work|work|Digital_Clock.vt|
 !s101 -O0
 R9
-Z22 n@t@o@p_vlg_check_tst
+Z23 n@t@o@p_vlg_check_tst
 vTOP_vlg_sample_tst
 !i10b 1
-Z23 !s100 Akee9jKj9>MP?P_>fIL^=1
-Z24 I5Y8j99M3ZH3Cd]WIQ]RTh0
-Z25 VZWiUcD_lVV00Mb[XnohEJ2
+Z24 !s100 Akee9jKj9>MP?P_>fIL^=1
+Z25 I5Y8j99M3ZH3Cd]WIQ]RTh0
+Z26 VZWiUcD_lVV00Mb[XnohEJ2
 R3
-R4
 R17
 R18
+R19
 L0 29
 R7
 r1
 !s85 0
 31
-R19
 R20
 R21
+R22
 !s101 -O0
 R9
-Z26 n@t@o@p_vlg_sample_tst
+Z27 n@t@o@p_vlg_sample_tst
 vTOP_vlg_vec_tst
 !i10b 1
-Z27 !s100 X<L00]m:H;YZcUY2mn8f42
-Z28 IJ6?682[N[<<L<MV7d;8=F3
-Z29 VBDbZc5TUj`4DT17_5R<4L1
+Z28 !s100 Hn@_;cZ1abPelJ1iC1YJT2
+Z29 IEnV;OLl_7_B^a^NR_8HbR2
+Z30 VBDbZc5TUj`4DT17_5R<4L1
 R3
-R4
 R17
 R18
-Z30 L0 973
+R19
+Z31 L0 469
 R7
 r1
 !s85 0
 31
-R19
 R20
 R21
+R22
 !s101 -O0
 R9
-Z31 n@t@o@p_vlg_vec_tst
+Z32 n@t@o@p_vlg_vec_tst

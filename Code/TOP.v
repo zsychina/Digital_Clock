@@ -18,12 +18,12 @@ module TOP(
     input 	[3:0]	clock_hour_shi,
     output  clock_out,
 
-    output	[3:0]	sec_ge_r,
-    output	[3:0]	sec_shi_r,
-    output	[3:0]	min_ge_r,
-    output	[3:0]	min_shi_r,
-    output	[3:0]	hour_ge_r,
-    output	[3:0]	hour_shi_r,
+    // output	[3:0]	sec_ge_r,
+    // output	[3:0]	sec_shi_r,
+    // output	[3:0]	min_ge_r,
+    // output	[3:0]	min_shi_r,
+    // output	[3:0]	hour_ge_r,
+    // output	[3:0]	hour_shi_r,
 
 
     output [6:0] out_sec_ge_seg,

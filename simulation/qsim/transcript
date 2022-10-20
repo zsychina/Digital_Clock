@@ -22,13 +22,13 @@
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
 # Loading cycloneii_ver.cycloneii_asynch_io
-# Loading cycloneii_ver.cycloneii_clk_delay_ctrl
 # Loading cycloneii_ver.cycloneii_clkctrl
 # Loading cycloneii_ver.cycloneii_mux41
 # Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_clk_delay_ctrl
 # Loading work.TOP_vlg_sample_tst
 # Loading work.TOP_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : Digital_Clock.vt(969)
+# ** Note: $finish    : Digital_Clock.vt(465)
 #    Time: 1 us  Iteration: 0  Instance: /TOP_vlg_vec_tst/tb_out

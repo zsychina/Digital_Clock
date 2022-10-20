@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Oct 20 19:17:07 2022
+Analysis & Synthesis Status : Successful - Thu Oct 20 19:35:00 2022
 Quartus II 32-bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : Digital_Clock
 Top-level Entity Name : TOP
 Family : Cyclone II
-Total logic elements : 123
-    Total combinational functions : 121
+Total logic elements : 124
+    Total combinational functions : 122
     Dedicated logic registers : 86
 Total registers : 86
-Total pins : 87
+Total pins : 63
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
