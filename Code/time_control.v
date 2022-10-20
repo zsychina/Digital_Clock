@@ -2,15 +2,15 @@ module time_control(
     input	clk,
     input	rst_n,
 
-    input	set_time_finish,		//设置时间
-    input 	[3:0]	set_sec_ge,
-    input 	[3:0]	set_sec_shi, 
-    input 	[3:0]	set_min_ge,  
-    input 	[3:0]	set_min_shi,	
-    input 	[3:0]	set_hour_ge,
-    input 	[3:0]	set_hour_shi,
+    input	set_time_finish,	
+    // input 	[3:0]	set_sec_ge,
+    // input 	[3:0]	set_sec_shi, 
+    // input 	[3:0]	set_min_ge,  
+    // input 	[3:0]	set_min_shi,	
+    // input 	[3:0]	set_hour_ge,
+    // input 	[3:0]	set_hour_shi,
     
-    input	clock_en,				//闹钟开关，置“1”打开闹钟；置“0”关闭闹钟。
+    input	clock_en,		
     input 	[3:0]	clock_min_ge,
     input 	[3:0]	clock_min_shi,
     input 	[3:0]	clock_hour_ge,
@@ -18,21 +18,39 @@ module time_control(
     // output	reg		clock_out,
     output  clock_out_w,
 
-    output	[3:0]	sec_ge_r,
-    output	[3:0]	sec_shi_r,
-    output	[3:0]	min_ge_r,
-    output	[3:0]	min_shi_r,
-    output	[3:0]	hour_ge_r,
-    output	[3:0]	hour_shi_r
+    // output	[3:0]	sec_ge_r,
+    // output	[3:0]	sec_shi_r,
+    // output	[3:0]	min_ge_r,
+    // output	[3:0]	min_shi_r,
+    // output	[3:0]	hour_ge_r,
+    // output	[3:0]	hour_shi_r
 );
 
-//=================时钟模块====================//
-//---------1ms延时-------//
+
+reg [3:0]	set_sec_ge;
+reg [3:0]	set_sec_shi; 
+reg [3:0]	set_min_ge; 
+reg [3:0]	set_min_shi;	
+reg [3:0]	set_hour_ge;
+reg [3:0]	set_hour_shi;   
+initial begin
+    set_sec_ge <= 4'h5;
+    set_sec_shi <= 4'h4; 
+    set_min_ge <= 4'h9; 
+    set_min_shi <= 4'h5;	
+    set_hour_ge <= 4'h2;
+    set_hour_shi <= 4'h1;   
+end
+
+
+
+
+
 // divider
 // branch dlut22: considering the clk is 50MHz, the ms class delay should be a mod 5e4(16'd49999=16'b1100_0011_0100_1111) divider
 //
-reg		[15:0]	cnt_1ms;	//1ms计数
-reg 	flag_1ms;			//ms进位信号
+reg		[15:0]	cnt_1ms;	
+reg 	flag_1ms;			
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)	begin  // rst_n=0
         cnt_1ms <= 0;
@@ -47,9 +65,9 @@ always @(posedge clk or negedge rst_n) begin
         flag_1ms <= 0;
     end
 end
-//--------1s延时--------//
-reg		[11:0]	cnt_1s;		//1s计数
-reg		flag_1s;			//s进位信号
+//--------1s瀵よ埖妞-------//
+reg		[11:0]	cnt_1s;		
+reg		flag_1s;			
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)	begin
         cnt_1s <= 0;
@@ -70,14 +88,12 @@ always @(posedge clk or negedge rst_n) begin
         flag_1s <= 0;
     end
 end
-//============================================//
 
-//=================时钟模块====================//
-//---------秒钟个位、十位--------//
+
 reg		[3:0]	sec_ge;
-reg		flag_sec_ge;		//秒钟个位进位信号
+reg		flag_sec_ge;		
 reg		[2:0]	sec_shi;
-reg		flag_sec_shi;		//秒钟十位进位信号
+reg		flag_sec_shi;		
 
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)	begin
@@ -128,11 +144,11 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
-//---------分钟个位、十位--------//
+
 reg		[3:0]	min_ge;
-reg		flag_min_ge;		//分钟个位进位信号
+reg		flag_min_ge;		
 reg		[2:0]	min_shi;
-reg		flag_min_shi;		//分钟十位进位信号
+reg		flag_min_shi;		
 
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)	begin
@@ -183,7 +199,7 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
-//---------时钟个位、十位--------//
+
 reg		[3:0]	hour_ge;
 reg		flag_hour_ge;
 reg		[1:0]	hour_shi;
@@ -250,8 +266,9 @@ assign	min_shi_r = min_shi;
 assign	hour_ge_r = hour_ge;
 assign	hour_shi_r = hour_shi;
 
-//=================闹钟设置===================//
+
 reg clock_out;
+
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)	begin
         clock_out <= 0;
@@ -269,9 +286,42 @@ always @(posedge clk or negedge rst_n) begin
         clock_out <= clock_out;
     end
 end
-assign clock_out_w = clock_out;
+
 
 //============================================//
+
+// hourly report
+reg [3:0] parity_cnt;
+reg clock_out_h;
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin
+        clock_out_h <= 0;
+    end
+    else if(!clock_en) begin
+        clock_out_h <= 0;
+    end
+    else if(
+        (min_shi == 4'h5) &&
+        (min_ge == 4'h9) &&
+        (sec_shi == 4'h5)
+    ) begin
+        parity_cnt = parity_cnt + 1;
+        if(parity_cnt%2) begin
+            clock_out_h <= 1;
+        end
+        else begin
+            clock_out_h <= 0;
+        end
+    end
+    else begin
+        parity_cnt <= 0;
+		clock_out_h <= 0;
+    end
+end
+
+
+
+assign clock_out_w = clock_out|clock_out_h;
 
 
 endmodule

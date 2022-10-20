@@ -552,306 +552,6 @@ SIGNAL("clock_min_ge[0]")
 	PARENT = "clock_min_ge";
 }
 
-SIGNAL("set_hour_shi")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("set_hour_shi[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_shi";
-}
-
-SIGNAL("set_hour_shi[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_shi";
-}
-
-SIGNAL("set_hour_shi[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_shi";
-}
-
-SIGNAL("set_hour_shi[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_shi";
-}
-
-SIGNAL("set_hour_ge")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("set_hour_ge[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_ge";
-}
-
-SIGNAL("set_hour_ge[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_ge";
-}
-
-SIGNAL("set_hour_ge[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_ge";
-}
-
-SIGNAL("set_hour_ge[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_hour_ge";
-}
-
-SIGNAL("set_min_shi")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("set_min_shi[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_shi";
-}
-
-SIGNAL("set_min_shi[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_shi";
-}
-
-SIGNAL("set_min_shi[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_shi";
-}
-
-SIGNAL("set_min_shi[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_shi";
-}
-
-SIGNAL("set_min_ge")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("set_min_ge[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_ge";
-}
-
-SIGNAL("set_min_ge[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_ge";
-}
-
-SIGNAL("set_min_ge[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_ge";
-}
-
-SIGNAL("set_min_ge[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_min_ge";
-}
-
-SIGNAL("set_sec_shi")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("set_sec_shi[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_shi";
-}
-
-SIGNAL("set_sec_shi[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_shi";
-}
-
-SIGNAL("set_sec_shi[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_shi";
-}
-
-SIGNAL("set_sec_shi[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_shi";
-}
-
-SIGNAL("set_sec_ge")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("set_sec_ge[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_ge";
-}
-
-SIGNAL("set_sec_ge[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_ge";
-}
-
-SIGNAL("set_sec_ge[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_ge";
-}
-
-SIGNAL("set_sec_ge[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "set_sec_ge";
-}
-
 SIGNAL("clock_en")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -1379,7 +1079,8 @@ TRANSITION_LIST("clock_hour_ge[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 999.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1451,225 +1152,6 @@ TRANSITION_LIST("clock_min_ge[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 999.0;
-		LEVEL 0 FOR 1.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_shi[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_shi[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_shi[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_shi[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 999.0;
-		LEVEL 0 FOR 1.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_ge[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_ge[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_ge[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 999.0;
-		LEVEL 0 FOR 1.0;
-	}
-}
-
-TRANSITION_LIST("set_hour_ge[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_shi[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_shi[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_shi[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_shi[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_ge[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_ge[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_ge[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_min_ge[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_shi[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_shi[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_shi[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_shi[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_ge[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_ge[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_ge[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("set_sec_ge[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
 		LEVEL 0 FOR 1000.0;
 	}
 }
@@ -1679,10 +1161,7 @@ TRANSITION_LIST("clock_en")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 330.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 659.0;
-		LEVEL 0 FOR 1.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1691,10 +1170,9 @@ TRANSITION_LIST("set_time_finish")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 789.0;
-		LEVEL 0 FOR 1.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 900.0;
 	}
 }
 
@@ -2466,312 +1944,12 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "set_hour_shi";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 62;
-	TREE_LEVEL = 0;
-	CHILDREN = 63, 64, 65, 66;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_shi[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 63;
-	TREE_LEVEL = 1;
-	PARENT = 62;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_shi[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 64;
-	TREE_LEVEL = 1;
-	PARENT = 62;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_shi[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 65;
-	TREE_LEVEL = 1;
-	PARENT = 62;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_shi[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 66;
-	TREE_LEVEL = 1;
-	PARENT = 62;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_ge";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 67;
-	TREE_LEVEL = 0;
-	CHILDREN = 68, 69, 70, 71;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_ge[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 68;
-	TREE_LEVEL = 1;
-	PARENT = 67;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_ge[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 69;
-	TREE_LEVEL = 1;
-	PARENT = 67;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_ge[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 70;
-	TREE_LEVEL = 1;
-	PARENT = 67;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_hour_ge[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 71;
-	TREE_LEVEL = 1;
-	PARENT = 67;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_shi";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 72;
-	TREE_LEVEL = 0;
-	CHILDREN = 73, 74, 75, 76;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_shi[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 73;
-	TREE_LEVEL = 1;
-	PARENT = 72;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_shi[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 74;
-	TREE_LEVEL = 1;
-	PARENT = 72;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_shi[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 75;
-	TREE_LEVEL = 1;
-	PARENT = 72;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_shi[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 76;
-	TREE_LEVEL = 1;
-	PARENT = 72;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_ge";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 77;
-	TREE_LEVEL = 0;
-	CHILDREN = 78, 79, 80, 81;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_ge[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 78;
-	TREE_LEVEL = 1;
-	PARENT = 77;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_ge[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 79;
-	TREE_LEVEL = 1;
-	PARENT = 77;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_ge[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 80;
-	TREE_LEVEL = 1;
-	PARENT = 77;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_min_ge[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 81;
-	TREE_LEVEL = 1;
-	PARENT = 77;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_shi";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 82;
-	TREE_LEVEL = 0;
-	CHILDREN = 83, 84, 85, 86;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_shi[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 83;
-	TREE_LEVEL = 1;
-	PARENT = 82;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_shi[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 84;
-	TREE_LEVEL = 1;
-	PARENT = 82;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_shi[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 85;
-	TREE_LEVEL = 1;
-	PARENT = 82;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_shi[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 86;
-	TREE_LEVEL = 1;
-	PARENT = 82;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_ge";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 87;
-	TREE_LEVEL = 0;
-	CHILDREN = 88, 89, 90, 91;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_ge[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 88;
-	TREE_LEVEL = 1;
-	PARENT = 87;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_ge[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 89;
-	TREE_LEVEL = 1;
-	PARENT = 87;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_ge[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 90;
-	TREE_LEVEL = 1;
-	PARENT = 87;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "set_sec_ge[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 91;
-	TREE_LEVEL = 1;
-	PARENT = 87;
-}
-
-DISPLAY_LINE
-{
 	CHANNEL = "out_sec_shi_seg";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 92;
+	TREE_INDEX = 62;
 	TREE_LEVEL = 0;
-	CHILDREN = 93, 94, 95, 96, 97, 98, 99;
+	CHILDREN = 63, 64, 65, 66, 67, 68, 69;
 }
 
 DISPLAY_LINE
@@ -2779,9 +1957,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 93;
+	TREE_INDEX = 63;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2789,9 +1967,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 94;
+	TREE_INDEX = 64;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2799,9 +1977,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 95;
+	TREE_INDEX = 65;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2809,9 +1987,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 96;
+	TREE_INDEX = 66;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2819,9 +1997,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 97;
+	TREE_INDEX = 67;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2829,9 +2007,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 98;
+	TREE_INDEX = 68;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2839,9 +2017,9 @@ DISPLAY_LINE
 	CHANNEL = "out_sec_shi_seg[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 99;
+	TREE_INDEX = 69;
 	TREE_LEVEL = 1;
-	PARENT = 92;
+	PARENT = 62;
 }
 
 DISPLAY_LINE
@@ -2849,7 +2027,7 @@ DISPLAY_LINE
 	CHANNEL = "clock_out";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 100;
+	TREE_INDEX = 70;
 	TREE_LEVEL = 0;
 }
 

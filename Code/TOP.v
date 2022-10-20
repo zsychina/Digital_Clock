@@ -4,12 +4,12 @@ module TOP(
     input	rst_n,
 
     input	set_time_finish,
-    input 	[3:0]	set_sec_ge,
-    input 	[3:0]	set_sec_shi, 
-    input 	[3:0]	set_min_ge,  
-    input 	[3:0]	set_min_shi,	
-    input 	[3:0]	set_hour_ge,
-    input 	[3:0]	set_hour_shi,
+    // input 	[3:0]	set_sec_ge,
+    // input 	[3:0]	set_sec_shi, 
+    // input 	[3:0]	set_min_ge,  
+    // input 	[3:0]	set_min_shi,	
+    // input 	[3:0]	set_hour_ge,
+    // input 	[3:0]	set_hour_shi,
     
     input	clock_en,
     input 	[3:0]	clock_min_ge,
@@ -18,12 +18,12 @@ module TOP(
     input 	[3:0]	clock_hour_shi,
     output  clock_out,
 
-    // output	[3:0]	sec_ge_r,
-    // output	[3:0]	sec_shi_r,
-    // output	[3:0]	min_ge_r,
-    // output	[3:0]	min_shi_r,
-    // output	[3:0]	hour_ge_r,
-    // output	[3:0]	hour_shi_r,
+    output	[3:0]	sec_ge_r,
+    output	[3:0]	sec_shi_r,
+    output	[3:0]	min_ge_r,
+    output	[3:0]	min_shi_r,
+    output	[3:0]	hour_ge_r,
+    output	[3:0]	hour_shi_r,
 
 
     output [6:0] out_sec_ge_seg,
@@ -33,6 +33,24 @@ module TOP(
     output [6:0] out_hour_ge_seg,
     output [6:0] out_hour_shi_seg
 );
+
+// default set_time: 12:00:00
+// reg [3:0]	set_sec_ge;
+// reg [3:0]	set_sec_shi; 
+// reg [3:0]	set_min_ge; 
+// reg [3:0]	set_min_shi;	
+// reg [3:0]	set_hour_ge;
+// reg [3:0]	set_hour_shi;   
+// initial begin
+//     set_sec_ge <= 4'h0;
+//     set_sec_shi <= 4'h0; 
+//     set_min_ge <= 4'h0; 
+//     set_min_shi <= 4'h0;	
+//     set_hour_ge <= 4'h2;
+//     set_hour_shi <= 4'h1;   
+// end
+
+
 
 wire [3:0]	sec_ge_rr;
 wire [3:0]	sec_shi_rr;
@@ -72,12 +90,12 @@ time_control			time_control_inst(
     .rst_n				(rst_n),
 
     .set_time_finish	(set_time_finish),
-    .set_sec_ge			(set_sec_ge),
-    .set_sec_shi		(set_sec_shi),	 
-    .set_min_ge			(set_min_ge),  
-    .set_min_shi		(set_min_shi),	
-    .set_hour_ge		(set_hour_ge),
-    .set_hour_shi		(set_hour_shi),
+    // .set_sec_ge			(set_sec_ge),
+    // .set_sec_shi		(set_sec_shi),	 
+    // .set_min_ge			(set_min_ge),  
+    // .set_min_shi		(set_min_shi),	
+    // .set_hour_ge		(set_hour_ge),
+    // .set_hour_shi		(set_hour_shi),
 
     .clock_en			(clock_en),	
     .clock_min_ge		(clock_min_ge),
