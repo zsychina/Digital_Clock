@@ -30,5 +30,5 @@
 # Loading work.TOP_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : Digital_Clock.vt(465)
+# ** Note: $finish    : Digital_Clock.vt(1485)
 #    Time: 1 us  Iteration: 0  Instance: /TOP_vlg_vec_tst/tb_out

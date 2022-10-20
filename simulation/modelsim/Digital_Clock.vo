@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 32-bit"
 // VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Full Version"
 
-// DATE "10/20/2022 19:35:18"
+// DATE "10/20/2022 22:05:56"
 
 // 
 // Device: Altera EP2C35F672C6 Package FBGA672
@@ -309,10 +309,10 @@ wire [6:0] \display_ctrl_inst|out_min_shi ;
 wire [6:0] \display_ctrl_inst|out_min_ge ;
 wire [6:0] \display_ctrl_inst|out_hour_shi ;
 wire [6:0] \display_ctrl_inst|out_hour_ge ;
-wire [3:0] \clock_min_ge~combout ;
-wire [3:0] \clock_hour_shi~combout ;
 wire [3:0] \clock_hour_ge~combout ;
 wire [3:0] \clock_min_shi~combout ;
+wire [3:0] \clock_min_ge~combout ;
+wire [3:0] \clock_hour_shi~combout ;
 
 
 // Location: LCCOMB_X36_Y1_N4

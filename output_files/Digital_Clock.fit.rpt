@@ -1,5 +1,5 @@
 Fitter report for Digital_Clock
-Thu Oct 20 19:35:05 2022
+Thu Oct 20 22:05:51 2022
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Oct 20 19:35:05 2022       ;
+; Fitter Status                      ; Successful - Thu Oct 20 22:05:51 2022       ;
 ; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; Digital_Clock                               ;
 ; Top-level Entity Name              ; TOP                                         ;
@@ -1797,7 +1797,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.38 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.50 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 43 output pins without output pin load capacitance assignment
     Info (306007): Pin "clock_out" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1851,9 +1851,9 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file E:/FPGA/Digital_Clock/output_files/Digital_Clock.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 624 megabytes
-    Info: Processing ended: Thu Oct 20 19:35:05 2022
+    Info: Processing ended: Thu Oct 20 22:05:51 2022
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+

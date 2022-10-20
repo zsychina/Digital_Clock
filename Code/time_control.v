@@ -56,7 +56,7 @@ always @(posedge clk or negedge rst_n) begin
         cnt_1ms <= 0;
         flag_1ms <= 0;
     end
-    else if(cnt_1ms == 16'd4)	begin  // cnt_1ms = 0000 0000 0000 0100 = 16'd4, **change here if necessary**
+    else if(cnt_1ms == 16'd4)	begin  // change to 5e4
         cnt_1ms <= 0;
         flag_1ms <= 1;
     end
@@ -74,7 +74,7 @@ always @(posedge clk or negedge rst_n) begin
         flag_1s <= 0;
     end
     else if(flag_1ms)	begin
-        if(cnt_1s == 12'd4)	begin  //cnt_1s = 0000 0000 0100, why not 12'd999, shouldn't it a mod1000 divdier?
+        if(cnt_1s == 12'd4)	begin  //change to 1000
             cnt_1s <= 0;
             flag_1s <= 1;
         end
@@ -306,7 +306,7 @@ always @(posedge flag_1ms or negedge rst_n) begin
         (sec_shi == 4'h5)
     ) begin
         parity_cnt = parity_cnt + 1;
-        if(parity_cnt%2 == 1) begin  //change to 1000 when actually use
+        if(parity_cnt%2 == 1) begin  //change to 500 when actually use
             clock_out_h <= 1;
         end
         else begin
